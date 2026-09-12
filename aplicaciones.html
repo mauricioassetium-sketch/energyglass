@@ -43,7 +43,7 @@
     <h2>Cinco familias, un mismo núcleo</h2>
     <div class="grid2">
       <div>
-        <div class="grid3" style="grid-template-columns:1fr">
+        <div class="grid3 stagger" style="grid-template-columns:1fr">
           <div class="card"><h3>Fachadas comerciales</h3><p>Energía desde la envolvente del edificio, manteniendo la estética acristalada y la luz natural en oficinas y retail.</p></div>
           <div class="card"><h3>Agricultura</h3><p>Invernaderos que generan electricidad sin robar luz a los cultivos: el perímetro recolecta mientras el campo recibe pleno sol.</p></div>
           <div class="card"><h3>Seguridad</h3><p>Barrera laminada con certificación balística y de intrusión para edificios críticos e institucionales.</p></div>
@@ -51,30 +51,29 @@
           <div class="card"><h3>Diseño y ESG</h3><p>Integración arquitectónica con beneficios medibles de sostenibilidad para proyectos con objetivos ambientales.</p></div>
         </div>
       </div>
-      <figure class="diagram">
-        <svg viewBox="0 0 560 520" role="img" aria-label="Núcleo EnergyGlass con cinco ramas de aplicación">
+      <figure class="diagram reveal">
+        <svg viewBox="0 0 560 520" role="img" aria-label="Núcleo EnergyGlass con cinco ramas de aplicación" class="anim-svg">
           <defs>
-            <linearGradient id="core" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21d4c0"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
-            <linearGradient id="node" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13222f"/><stop offset="1" stop-color="#0e1a28"/></linearGradient>
+            <linearGradient id="core" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19c9b5"/><stop offset="1" stop-color="#0a8f83"/></linearGradient>
+            <linearGradient id="node" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3f1ef"/></linearGradient>
           </defs>
-          <g stroke="#24455c" stroke-width=".8" opacity=".8">
+          <g stroke="#c6d9e2" stroke-width=".8" opacity=".8" class="fade">
             <line x1="280" y1="250" x2="120" y2="110"/>
             <line x1="280" y1="250" x2="440" y2="110"/>
             <line x1="280" y1="250" x2="90" y2="360"/>
             <line x1="280" y1="250" x2="470" y2="360"/>
             <line x1="280" y1="250" x2="280" y2="78"/>
           </g>
-          <circle cx="280" cy="250" r="42" fill="url(#core)" class="corepulse"/>
-          <text x="280" y="246" text-anchor="middle" font-family="Inter,system-ui" font-size="11" font-weight="800" fill="#02140f">Energy</text>
-          <text x="280" y="260" text-anchor="middle" font-family="Inter,system-ui" font-size="11" font-weight="800" fill="#02140f">Glass</text>
-          <g font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb" text-anchor="middle">
-            <g><circle cx="120" cy="110" r="26" fill="url(#node)" stroke="#21d4c0" stroke-width="1"/><text x="120" y="114">Fachadas</text></g>
-            <g><circle cx="440" cy="110" r="26" fill="url(#node)" stroke="#21d4c0" stroke-width="1"/><text x="440" y="114">Cultivos</text></g>
-            <g><circle cx="90" cy="360" r="26" fill="url(#node)" stroke="#21d4c0" stroke-width="1"/><text x="90" y="364">Seguridad</text></g>
-            <g><circle cx="470" cy="360" r="26" fill="url(#node)" stroke="#21d4c0" stroke-width="1"/><text x="470" y="364">Costero</text></g>
-            <g><circle cx="280" cy="78" r="26" fill="url(#node)" stroke="#21d4c0" stroke-width="1"/><text x="280" y="82">ESG</text></g>
+          <circle cx="280" cy="250" r="42" fill="url(#core)" class="fade"/>
+          <text x="280" y="246" text-anchor="middle" font-family="Inter,system-ui" font-size="11" font-weight="800" fill="#ffffff">Energy</text>
+          <text x="280" y="260" text-anchor="middle" font-family="Inter,system-ui" font-size="11" font-weight="800" fill="#ffffff">Glass</text>
+          <g font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e" text-anchor="middle">
+            <g class="fade d1"><circle cx="120" cy="110" r="26" fill="url(#node)" stroke="#0fb8a6" stroke-width="1"/><text x="120" y="114">Fachadas</text></g>
+            <g class="fade d2"><circle cx="440" cy="110" r="26" fill="url(#node)" stroke="#0fb8a6" stroke-width="1"/><text x="440" y="114">Cultivos</text></g>
+            <g class="fade d2"><circle cx="90" cy="360" r="26" fill="url(#node)" stroke="#0fb8a6" stroke-width="1"/><text x="90" y="364">Seguridad</text></g>
+            <g class="fade d3"><circle cx="470" cy="360" r="26" fill="url(#node)" stroke="#0fb8a6" stroke-width="1"/><text x="470" y="364">Costero</text></g>
+            <g class="fade d4"><circle cx="280" cy="78" r="26" fill="url(#node)" stroke="#0fb8a6" stroke-width="1"/><text x="280" y="82">ESG</text></g>
           </g>
-          <style>.corepulse{animation:cp 3.4s ease-in-out infinite}@keyframes cp{0%,100%{r:42;opacity:1}50%{r:48;opacity:.85}}@media (prefers-reduced-motion:reduce){.corepulse{animation:none}}</style>
         </svg>
         <figcaption>Un núcleo técnico, cinco salidas al mercado.</figcaption>
       </figure>
@@ -87,38 +86,49 @@
     <span class="kicker">Caso destacado</span>
     <h2>Agricultura bajo vidrio generador</h2>
     <div class="grid2">
-      <figure class="diagram" style="min-height:360px">
-        <svg viewBox="0 0 560 360" role="img" aria-label="Invernadero Venlo de vidrio con marco fotovoltaico generador, cultivos en hileras y sol">
+      <figure class="diagram reveal" style="min-height:360px">
+        <svg viewBox="0 0 560 360" role="img" aria-label="Invernadero Venlo de vidrio con marco fotovoltaico generador, cultivos en hileras y sol" class="anim-svg">
           <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1e2c"/><stop offset="1" stop-color="#15323f"/></linearGradient>
-            <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3a2a"/><stop offset="1" stop-color="#12281c"/></linearGradient>
-            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9efe9" stop-opacity=".9"/><stop offset="1" stop-color="#8fded2" stop-opacity=".7"/></linearGradient>
-            <linearGradient id="pv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#21d4c0"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+            <linearGradient id="skyv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe8f2"/><stop offset="1" stop-color="#eef5f8"/></linearGradient>
+            <linearGradient id="glassroof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0fbf9"/><stop offset="1" stop-color="#cfeae6"/></linearGradient>
+            <linearGradient id="grassv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe7c0"/><stop offset="1" stop-color="#a9d489"/></linearGradient>
+            <linearGradient id="pvv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19c9b5"/><stop offset="1" stop-color="#0a8f83"/></linearGradient>
+            <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
           </defs>
-          <rect width="560" height="360" fill="url(#sky)"/>
-          <circle cx="472" cy="58" r="30" fill="#f2b23b" opacity=".95"/>
-          <circle cx="472" cy="58" r="40" fill="none" stroke="#f2b23b" stroke-width="1" opacity=".35"/>
-          <g stroke="#eef4f6" stroke-width=".6" opacity=".18">
+          <rect width="560" height="360" fill="url(#skyv)"/>
+          <circle cx="472" cy="58" r="30" fill="#f2b23b" opacity=".95" class="fade"/>
+          <circle cx="472" cy="58" r="40" fill="none" stroke="#f2b23b" stroke-width="1" opacity=".35" class="fade d1"/>
+          <g stroke="#bcd4de" stroke-width=".6" opacity=".4" class="fade d1">
             <line x1="24" y1="130" x2="120" y2="130"/><line x1="60" y1="164" x2="180" y2="164"/>
             <line x1="320" y1="120" x2="430" y2="120"/><line x1="350" y1="150" x2="470" y2="150"/>
           </g>
-          <rect y="240" width="560" height="120" fill="url(#grass)"/>
-          <line x1="0" y1="240" x2="560" y2="240" stroke="#2a4a38" stroke-width="1"/>
+          <rect y="240" width="560" height="120" fill="url(#grassv)"/>
+          <line x1="0" y1="240" x2="560" y2="240" stroke="#a9d489" stroke-width="1"/>
           <g>
-            <path d="M40 300 L200 300 L200 256 Z" fill="none" stroke="#21d4c0" stroke-width="1.6" opacity=".9"/>
-            <path d="M40 300 L200 256" stroke="#21d4c0" stroke-width="2"/>
-            <path d="M98 300 L135 262" stroke="#0f9e93" stroke-width="1.4"/>
-            <path d="M200 300 L240 266" stroke="#21d4c0" stroke-width="1.6" opacity=".8"/>
+            <path d="M40 240 L200 120 L360 120 L360 240 Z" fill="url(#glassroof)" stroke="#a9d2cf" stroke-width="1" class="fade"/>
+            <path d="M44 236 L200 124 L356 230 Z" fill="url(#shine)" opacity=".5" class="fade d1"/>
+            <line x1="200" y1="120" x2="200" y2="240" stroke="#a9d2cf" stroke-width=".8" class="fade d1"/>
+            <line x1="120" y1="120" x2="120" y2="240" stroke="#bfe0dc" stroke-width=".5" class="fade d2"/>
+            <line x1="280" y1="120" x2="280" y2="240" stroke="#bfe0dc" stroke-width=".5" class="fade d2"/>
           </g>
-          <g stroke="#14324a" stroke-width=".5" opacity=".55">
+          <g class="fade d2">
+            <path d="M40 240 L200 120" class="draw" fill="none" stroke="#0fb8a6" stroke-width="2"/>
+            <path d="M360 240 L200 120" class="draw" fill="none" stroke="#0fb8a6" stroke-width="2"/>
+          </g>
+          <g>
+            <path d="M40 300 L200 300 L200 256 Z" fill="none" stroke="#0fa896" stroke-width="1.6" opacity=".9" class="fade d2"/>
+            <path d="M40 300 L200 256" stroke="#0fa896" stroke-width="2" class="fade d3"/>
+            <path d="M98 300 L135 262" stroke="#0a8f83" stroke-width="1.4" class="fade d3"/>
+            <path d="M200 300 L240 266" stroke="#0fa896" stroke-width="1.6" opacity=".8" class="fade d3"/>
+          </g>
+          <g stroke="#7fae6e" stroke-width=".5" opacity=".55" class="fade d3">
             <line x1="80" y1="300" x2="80" y2="276"/><line x1="120" y1="300" x2="120" y2="272"/>
             <line x1="160" y1="300" x2="160" y2="274"/><line x1="200" y1="300" x2="200" y2="276"/>
           </g>
-          <g fill="none" stroke="#21d4c0" stroke-width="1" opacity=".75">
+          <g fill="none" stroke="#0fb8a6" stroke-width="1" opacity=".75" class="fade d3">
             <circle cx="80" cy="176" r="2.4"/><circle cx="120" cy="176" r="2.4"/><circle cx="160" cy="176" r="2.4"/><circle cx="200" cy="176" r="2.4"/>
           </g>
-          <text x="168" y="334" text-anchor="middle" font-family="Inter,system-ui" font-size="11" fill="#7dd4c4">cultivos en pleno sol · energía en el perímetro</text>
-          <style>.edge{stroke-dasharray:6 4;animation:eg 3s linear infinite}@keyframes eg{to{stroke-dashoffset:-20}}.pulse{animation:pp 2.6s ease-in-out infinite}@keyframes pp{0%,100%{opacity:.5}50%{opacity:1}}@media (prefers-reduced-motion:reduce){.edge,.pulse{animation:none}}</style>
+          <text x="168" y="334" text-anchor="middle" font-family="Inter,system-ui" font-size="11" fill="#5f7f55" class="fade d3">cultivos en pleno sol · energía en el perímetro</text>
         </svg>
         <figcaption>Invernadero agronómico con luz plena y generación perimetral</figcaption>
       </figure>
@@ -142,12 +152,12 @@
     <span class="kicker">Sostenibilidad</span>
     <h2>Integración ESG</h2>
     <div class="photo-grid2">
-      <figure class="photo">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop" alt="Campo de paneles solares" loading="lazy">
-        <figcaption>Generación limpia como complemento de la arquitectura</figcaption>
+      <figure class="photo reveal">
+        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=1200&q=80&auto=format&fit=crop" alt="Invernadero de vidrio con hileras de cultivo" loading="lazy">
+        <figcaption>Invernaderos de vidrio: producción bajo luz natural</figcaption>
       </figure>
-      <figure class="photo">
-        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&q=80&auto=format&fit=crop" alt="Cultivo en crecimiento" loading="lazy">
+      <figure class="photo reveal">
+        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&q=80&auto=format&fit=crop" alt="Planta creciendo hacia la luz" loading="lazy">
         <figcaption>Producción agrícola bajo luz natural</figcaption>
       </figure>
     </div>
@@ -177,5 +187,6 @@
     <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
