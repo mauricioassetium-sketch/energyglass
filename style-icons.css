@@ -1,0 +1,27 @@
+/* === Iconos personalizados (SVG inline) === */
+.ico-svg{
+  width:34px;height:34px;color:var(--green);
+  display:inline-block;vertical-align:middle;
+  flex:0 0 auto;
+}
+.card .ico-svg{width:34px;height:34px;margin-bottom:14px;color:var(--green)}
+.deep .card .ico-svg{color:var(--amber)}
+
+/* Animación de dibujo: cada trazo se dibuja al entrar en pantalla */
+.ico-svg .d{
+  fill:none;
+  stroke-dasharray:120;
+  stroke-dashoffset:120;
+  transition:stroke-dashoffset 1.1s cubic-bezier(.4,0,.2,1);
+}
+.ico-svg.in-view .d{stroke-dashoffset:0}
+
+/* Iconos en chips */
+.icon-chip{
+  width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+  border-radius:14px;background:var(--paper-t);border:1px solid var(--line);
+  margin-bottom:20px;
+}
+.icon-chip .ico-svg{width:30px;height:30px;margin:0}
+.icon-chip.amber{background:var(--amber);border-color:var(--amber)}
+.icon-chip.amber .ico-svg{color:#221500}
