@@ -41,56 +41,56 @@
   <div class="wrap">
     <span class="kicker">Camino de la luz</span>
     <h2>Cinco etapas, un solo panel</h2>
-    <figure class="diagram">
-      <svg viewBox="0 0 1140 300" role="img" aria-label="Camino de la luz: sol, vidrio, interlayer, PV, inversor, edificio">
+    <figure class="diagram reveal">
+      <svg viewBox="0 0 1140 300" role="img" aria-label="Camino de la luz: sol, vidrio, interlayer, PV, inversor, edificio" class="anim-svg">
         <defs>
-          <linearGradient id="sun2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f2a93b"/></linearGradient>
-          <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#21d4c0"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+          <linearGradient id="sun2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd227"/><stop offset="1" stop-color="#f2a93b"/></linearGradient>
+          <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0fb8a6"/><stop offset="1" stop-color="#0a8f83"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8f4f1"/><stop offset="1" stop-color="#bfe8e5"/></linearGradient>
         </defs>
-        <g fill="none" stroke="#24384b" stroke-width=".8">
-          <line x1="30" y1="150" x2="1110" y2="150" stroke-dasharray="2 6"/>
+        <g class="fade">
+          <line x1="30" y1="150" x2="1110" y2="150" stroke="#c6d9e2" stroke-width=".8" stroke-dasharray="2 6"/>
         </g>
         <g>
-          <circle cx="80" cy="70" r="26" fill="url(#sun2)"/>
-          <g class="rays2" style="transform-origin:80px 70px" stroke="#f2a93b" stroke-width="1" stroke-linecap="round">
+          <circle cx="80" cy="70" r="26" fill="url(#sun2)" class="fade"/>
+          <g stroke="#f2a93b" stroke-width="1" stroke-linecap="round" class="fade d1">
             <line x1="116" y1="70" x2="136" y2="70"/><line x1="44" y1="70" x2="24" y2="70"/>
             <line x1="80" y1="34" x2="80" y2="14"/><line x1="80" y1="106" x2="80" y2="126"/>
           </g>
-          <text x="80" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">1 · Luz solar</text>
+          <text x="80" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">1 · Luz solar</text>
         </g>
-        <g>
-          <rect x="250" y="90" width="18" height="120" rx="3" fill="#12324a" stroke="#2a5570" stroke-width=".8"/>
-          <text x="259" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">2 · Vidrio exterior</text>
+        <g class="fade d1">
+          <rect x="250" y="90" width="18" height="120" rx="3" fill="url(#glass)" stroke="#9fc9c4" stroke-width=".8"/>
+          <path d="M252 96 l8 -4 8 4 -8 4 z" fill="#ffffff" opacity=".85"/>
+          <text x="259" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">2 · Vidrio exterior</text>
         </g>
-        <g>
-          <rect x="460" y="100" width="14" height="100" rx="3" fill="#13454a" stroke="#21d4c0" stroke-width=".8"/>
-          <rect x="458" y="120" width="18" height="14" rx="7" fill="#21d4c0" class="pulselay"/>
-          <text x="467" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">3 · Interlayer guía-luz</text>
+        <g class="fade d2">
+          <rect x="460" y="100" width="14" height="100" rx="3" fill="#d9f2ef" stroke="#0fb8a6" stroke-width=".8"/>
+          <rect x="458" y="120" width="18" height="14" rx="7" fill="#0fb8a6"/>
+          <text x="467" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">3 · Interlayer guía-luz</text>
         </g>
-        <g>
-          <rect x="680" y="92" width="26" height="116" rx="4" fill="#123c48" stroke="#092a35" stroke-width=".8"/>
-          <g stroke="#21d4c0" stroke-width=".5"><line x1="686" y1="106" x2="700" y2="106"/><line x1="686" y1="122" x2="700" y2="122"/><line x1="686" y1="138" x2="700" y2="138"/><line x1="686" y1="154" x2="700" y2="154"/><line x1="686" y1="170" x2="700" y2="170"/></g>
-          <text x="693" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">4 · PV perimetral</text>
+        <g class="fade d3">
+          <rect x="680" y="92" width="26" height="116" rx="4" fill="#0fa896" stroke="#0a8f83" stroke-width=".8"/>
+          <g stroke="#eafffb" stroke-width=".6"><line x1="686" y1="106" x2="700" y2="106"/><line x1="686" y1="122" x2="700" y2="122"/><line x1="686" y1="138" x2="700" y2="138"/><line x1="686" y1="154" x2="700" y2="154"/><line x1="686" y1="170" x2="700" y2="170"/></g>
+          <text x="693" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">4 · PV perimetral</text>
         </g>
-        <g>
-          <rect x="890" y="110" width="60" height="80" rx="8" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
+        <g class="fade d4">
+          <rect x="890" y="110" width="60" height="80" rx="8" fill="#e8f5f3" stroke="#0fb8a6" stroke-width="1"/>
           <path d="M905 135l30 15-30 15z" fill="none" stroke="url(#wire)" stroke-width="1.4"/>
-          <text x="920" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">5 · Inversor CC→CA</text>
+          <text x="920" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">5 · Inversor CC→CA</text>
         </g>
-        <g>
-          <rect x="1030" y="86" width="58" height="124" rx="4" fill="#1a2c38" stroke="#2a4a5c" stroke-width=".8"/>
-          <g stroke="#3a5c70" stroke-width=".5" opacity=".7"><line x1="1030" y1="116" x2="1088" y2="116"/><line x1="1030" y1="146" x2="1088" y2="146"/><line x1="1030" y1="176" x2="1088" y2="176"/></g>
-          <text x="1059" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb">6 · Edificio</text>
+        <g class="fade d4">
+          <rect x="1030" y="86" width="58" height="124" rx="4" fill="#f0f6f8" stroke="#c6d9e2" stroke-width=".8"/>
+          <g stroke="#9fc9c4" stroke-width=".6" opacity=".8"><line x1="1030" y1="116" x2="1088" y2="116"/><line x1="1030" y1="146" x2="1088" y2="146"/><line x1="1030" y1="176" x2="1088" y2="176"/></g>
+          <text x="1059" y="180" text-anchor="middle" font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e">6 · Edificio</text>
         </g>
-        <g fill="#f2a93b">
-          <circle r="2.4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M80 70 Q160 70 250 120"/></circle>
-          <circle r="2"><animateMotion dur="3s" begin=".7s" repeatCount="indefinite" path="M250 120 L460 130"/></circle>
+        <g class="fade d2">
+          <circle r="2.4" fill="#f2a93b"><animateMotion dur="2.6s" repeatCount="indefinite" path="M80 70 Q160 70 250 120"/></circle>
         </g>
-        <circle r="2.6" fill="#21d4c0"><animateMotion dur="3.2s" repeatCount="indefinite" path="M460 130 L680 130"/></circle>
-        <circle r="2.2" fill="#0f766e"><animateMotion dur="2.8s" begin=".4s" repeatCount="indefinite" path="M680 130 L890 140"/></circle>
-        <circle r="2.2" fill="#0f766e"><animateMotion dur="2.4s" begin="1s" repeatCount="indefinite" path="M890 140 L1030 140"/></circle>
-        <path d="M80 220 C300 260 500 200 700 230 S1000 210 1059 220" fill="none" stroke="url(#wire)" stroke-width="1" opacity=".35" stroke-dasharray="4 6" class="thread"/>
-        <style>.rays2{animation:rot2 24s linear infinite}@keyframes rot2{to{transform:rotate(360deg)}}.pulselay{animation:pl 2.8s ease-in-out infinite}@keyframes pl{0%,100%{opacity:.4}50%{opacity:1}}.thread{stroke-dashoffset:200;animation:th 6s linear infinite}@keyframes th{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rays2,.pulselay,.thread{animation:none}}</style>
+        <circle r="2.6" fill="#0fb8a6" class="fade d2"><animateMotion dur="3.2s" repeatCount="indefinite" path="M460 130 L680 130"/></circle>
+        <circle r="2.2" fill="#0a8f83" class="fade d3"><animateMotion dur="2.8s" begin=".4s" repeatCount="indefinite" path="M680 130 L890 140"/></circle>
+        <circle r="2.2" fill="#0a8f83" class="fade d4"><animateMotion dur="2.4s" begin="1s" repeatCount="indefinite" path="M890 140 L1030 140"/></circle>
+        <path d="M80 220 C300 260 500 200 700 230 S1000 210 1059 220" fill="none" stroke="url(#wire)" stroke-width="1" opacity=".35" stroke-dasharray="4 6" class="fade d3"/>
       </svg>
       <figcaption>El fotón nunca se bloquea: el panel se mantiene transparente mientras los bordes generan.</figcaption>
     </figure>
@@ -102,7 +102,7 @@
     <span class="kicker">Anatomía</span>
     <h2>El laminado, capa por capa</h2>
     <div class="grid2">
-      <figure class="diagram">
+      <figure class="diagram reveal">
         <img src="assets/laminado.svg" alt="Sección transversal del laminado EnergyGlass">
         <figcaption>Corte del panel: dos vidrios, interlayer y PV perimetral.</figcaption>
       </figure>
@@ -126,20 +126,19 @@
     <span class="kicker">Caracterización</span>
     <h2>Números de laboratorio, ventana por ventana</h2>
     <div class="grid2">
-      <div class="card">
+      <div class="card reveal">
         <h3>Espectro de respuesta</h3>
-        <svg viewBox="0 0 520 220" role="img" aria-label="Curva de respuesta espectral entre 400 y 800 nanómetros">
-          <g stroke="#1c2c3d" stroke-width=".6">
+        <svg viewBox="0 0 520 220" role="img" aria-label="Curva de respuesta espectral entre 400 y 800 nanómetros" class="anim-svg">
+          <g stroke="#c6d9e2" stroke-width=".6">
             <line x1="40" y1="30" x2="500" y2="30"/><line x1="40" y1="70" x2="500" y2="70"/><line x1="40" y1="110" x2="500" y2="110"/><line x1="40" y1="150" x2="500" y2="150"/>
           </g>
-          <line x1="40" y1="180" x2="500" y2="180" stroke="#2a4a5c" stroke-width=".8"/>
-          <path d="M40 172 C120 168 160 90 240 60 C320 32 380 44 500 58" fill="none" stroke="#21d4c0" stroke-width="1.6" class="curve"/>
-          <path d="M40 172 C120 168 160 90 240 60 C320 32 380 44 500 58 L500 180 L40 180 Z" fill="#21d4c0" opacity=".12"/>
-          <text x="40" y="200" font-family="Inter,system-ui" font-size="11" fill="#647b8d">400 nm</text>
-          <text x="475" y="200" font-family="Inter,system-ui" font-size="11" fill="#647b8d">800 nm</text>
-          <text x="52" y="24" font-family="Inter,system-ui" font-size="11" fill="#647b8d">respuesta relativa</text>
-          <circle cx="240" cy="60" r="3" fill="#21d4c0" class="peak"/>
-          <style>.curve{stroke-dasharray:560;animation:draw 2.4s ease-out both}@keyframes draw{from{stroke-dashoffset:560}to{stroke-dashoffset:0}}.peak{animation:pk 3s 2.2s ease-in-out infinite}@keyframes pk{0%,100%{opacity:.4}50%{opacity:1}}@media (prefers-reduced-motion:reduce){.curve,.peak{animation:none}}</style>
+          <line x1="40" y1="180" x2="500" y2="180" stroke="#b9cdd6" stroke-width=".8"/>
+          <path d="M40 172 C120 168 160 90 240 60 C320 32 380 44 500 58" fill="none" stroke="#0fb8a6" stroke-width="1.6" class="draw"/>
+          <path d="M40 172 C120 168 160 90 240 60 C320 32 380 44 500 58 L500 180 L40 180 Z" fill="#0fb8a6" opacity=".10" class="fade"/>
+          <text x="40" y="200" font-family="Inter,system-ui" font-size="11" fill="#8096a3">400 nm</text>
+          <text x="475" y="200" font-family="Inter,system-ui" font-size="11" fill="#8096a3">800 nm</text>
+          <text x="52" y="24" font-family="Inter,system-ui" font-size="11" fill="#8096a3">respuesta relativa</text>
+          <circle cx="240" cy="60" r="3" fill="#0fb8a6" class="fade d2"/>
         </svg>
         <p style="font-size:14px">La conversión fotovoltaica se concentra en el rango visible (400–800 nm), el mismo que ilumina los interiores.</p>
       </div>
@@ -163,11 +162,11 @@
     <span class="kicker">Validación</span>
     <h2>Medir antes de prometer</h2>
     <div class="photo-grid2">
-      <figure class="photo">
+      <figure class="photo reveal">
         <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&q=80&auto=format&fit=crop" alt="Laboratorio de materiales" loading="lazy">
         <figcaption>Ensayos ópticos y eléctricos de laboratorio</figcaption>
       </figure>
-      <figure class="photo">
+      <figure class="photo reveal">
         <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80&auto=format&fit=crop" alt="Skyline urbano al atardecer" loading="lazy">
         <figcaption>Fachadas urbanas: el campo de aplicación real</figcaption>
       </figure>
@@ -198,5 +197,6 @@
     <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
