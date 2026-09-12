@@ -27,13 +27,13 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=1800&q=80&auto=format&fit=crop" alt="Fachada de vidrio moderna que refleja el cielo" loading="eager">
+    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=1800&q=80&auto=format&fit=crop" alt="Invernadero de vidrio reflejando el cielo al amanecer" loading="eager">
   </div>
   <div class="hero-veil"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Vidrio fotovoltaico</span>
     <h1>Transmite luz, <span class="grad">genera energía</span>, protege.</h1>
-    <p class="sub">SAF-GLAS EnergyGlass combina transparencia, generación fotovoltaica perimetral y resistencia estructural en un solo panel laminado.</p>
+    <p class="sub">SAF-GLAS EnergyGlass combina transparencia, generación fotovoltaica perimetral y resistencia estructural en un solo panel laminado de vidrio.</p>
     <div class="hctas">
       <a class="cta" href="tecnologia.html">Ver la tecnología</a>
       <a class="cta ghost" href="contacto.html">Hablar con un ingeniero</a>
@@ -50,7 +50,7 @@
   <div class="wrap">
     <span class="kicker">El producto</span>
     <h2>Un núcleo, cinco aplicaciones</h2>
-    <div class="grid3">
+    <div class="grid3 stagger">
       <div class="card"><h3>Fachadas</h3><p>Energía desde la envolvente sin perder luz ni estética.</p></div>
       <div class="card"><h3>Agricultura</h3><p>Invernaderos que generan mientras cultivan.</p></div>
       <div class="card"><h3>Seguridad</h3><p>Barrera laminada balística e intrusión.</p></div>
@@ -79,14 +79,41 @@
     <span class="kicker">En detalle</span>
     <h2>Cómo funciona</h2>
     <div class="grid2">
-      <div>
+      <div class="reveal">
         <p>La luz entra por el vidrio exterior, viaja guiada por el interlayer y se convierte en electricidad en el perímetro del panel, sin células opacas en el campo visual.</p>
         <p>El resultado: un vidrio que ilumina, genera y protege al mismo tiempo.</p>
         <a class="cta" style="margin-top:18px" href="tecnologia.html">El camino de la luz</a>
       </div>
-      <figure class="diagram">
-        <img src="assets/laminado.svg" alt="Sección transversal del laminado EnergyGlass">
-        <figcaption>Corte del panel: dos vidrios, interlayer y PV perimetral.</figcaption>
+      <figure class="diagram reveal">
+        <svg viewBox="0 0 900 420" role="img" aria-label="Fachada de vidrio generadora con panel perimetral y sol" class="anim-svg">
+          <defs>
+            <linearGradient id="idxsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe8f2"/><stop offset="1" stop-color="#eef5f8"/></linearGradient>
+            <linearGradient id="idxglass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0fbf9"/><stop offset="1" stop-color="#cfeae6"/></linearGradient>
+            <linearGradient id="idxpv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19c9b5"/><stop offset="1" stop-color="#0a8f83"/></linearGradient>
+            <linearGradient id="idxshine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="900" height="420" fill="url(#idxsky)"/>
+          <circle cx="780" cy="70" r="32" fill="#f2b23b" class="fade"/>
+          <circle cx="780" cy="70" r="44" fill="none" stroke="#f2b23b" stroke-width="1" opacity=".35" class="fade d1"/>
+          <!-- edificio -->
+          <rect x="240" y="150" width="420" height="250" fill="#e6f0f2" class="fade d1"/>
+          <rect x="240" y="150" width="420" height="250" fill="url(#idxglass)" class="fade d2"/>
+          <rect x="250" y="200" width="400" height="190" fill="url(#idxshine)" opacity=".4" class="fade d2"/>
+          <!-- rejilla de vidrio -->
+          <g stroke="#a9d2cf" stroke-width=".7" opacity=".8" class="fade d2">
+            <line x1="240" y1="230" x2="660" y2="230"/><line x1="240" y1="290" x2="660" y2="290"/><line x1="240" y1="350" x2="660" y2="350"/>
+            <line x1="340" y1="150" x2="340" y2="400"/><line x1="450" y1="150" x2="450" y2="400"/><line x1="560" y1="150" x2="560" y2="400"/>
+          </g>
+          <!-- marco perimetral PV que se ilumina -->
+          <rect x="226" y="136" width="448" height="278" fill="none" stroke="#0fb8a6" stroke-width="4" class="draw" />
+          <rect x="226" y="136" width="448" height="278" fill="none" stroke="#0fa896" stroke-width="1.2" opacity=".6" class="fade d3"/>
+          <g class="fade d3" fill="#0fb8a6">
+            <circle cx="226" cy="136" r="4"/><circle cx="674" cy="136" r="4"/><circle cx="226" cy="414" r="4"/><circle cx="674" cy="414" r="4"/>
+          </g>
+          <text x="450" y="96" text-anchor="middle" font-family="Inter,system-ui" font-size="14" font-weight="800" fill="#0d6b60" class="fade d3">EXTERIOR</text>
+          <text x="450" y="452" text-anchor="middle" font-family="Inter,system-ui" font-size="11" fill="#8096a3" class="fade d3">marco fotovoltaico perimetral · campo visual 100% transparente</text>
+        </svg>
+        <figcaption>La fachada genera por el perímetro: el campo visual queda libre de células.</figcaption>
       </figure>
     </div>
   </div>
@@ -115,5 +142,6 @@
     <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
