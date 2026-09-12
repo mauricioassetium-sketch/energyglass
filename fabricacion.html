@@ -3,105 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fabricación | EnergyGlass - Proceso de manufactura y calidad</title>
-<meta name="description" content="Proceso de fabricación de EnergyGlass: laminación, procesado isobárico, busing perimetral, control de calidad y ElectroFrame.">
+<title>Fabricación · SAF-GLAS EnergyGlass</title>
+<meta name="description" content="Cómo se fabrica EnergyGlass: corte y templado, laminación isobárica, integración del PV perimetral, encapsulado y control de calidad.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="nav">
+<header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html">
-      <svg width="36" height="24" viewBox="0 0 112 44" fill="none">
-        <defs><linearGradient id="egA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13e0c5"/><stop offset="1" stop-color="#007566"/></linearGradient></defs>
-        <rect x="4" y="4" width="9" height="36" rx="4.5" fill="url(#egA)"/>
-        <rect x="19" y="6" width="72" height="7" rx="3.5" fill="url(#egA)"/>
-        <rect x="19" y="18.5" width="92" height="7" rx="3.5" fill="url(#egA)"/>
-        <rect x="19" y="31" width="54" height="7" rx="3.5" fill="url(#egA)"/>
-      </svg>
-      EnergyGlass<span class="tm">™</span>
-    </a>
-    <div class="navmenu">
+    <a class="logo" href="index.html">SAF-GLAS<sup class="tm">®</sup> · EnergyGlass</a>
+    <nav class="navmenu">
       <a href="index.html">Inicio</a>
       <a href="tecnologia.html">Tecnología</a>
       <a href="defensa.html">Defensa</a>
-      <a href="ip.html">IP &amp; Patentes</a>
-      <a href="fabricacion.html" class="act">Fabricación</a>
+      <a href="ip.html">Propiedad intelectual</a>
+      <a class="on" href="fabricacion.html">Fabricación</a>
       <a href="aplicaciones.html">Aplicaciones</a>
-    </div>
-    <a class="cta" href="contacto.html">Contacto</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-inner">
-      <div class="eyebrow">Fabricación</div>
-      <h1>Del vidrio laminado al <span class="grad">producto listo para generar</span></h1>
-      <p class="sub">Un proceso documentado de cinco pasos combina la laminación protectora, el procesado isobárico, la integración eléctrica perimetral y el control de calidad final, para que cada paño salga listo para instalar y generar.</p>
-    </div>
-  </div>
-  <div class="cityband">
-    <img src="assets/city-energy.svg" alt="Fachadas EnergyGlass manufacturadas">
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <div class="kicker">El proceso completo</div>
-    <h2>Cinco pasos documentados</h2>
-    <p class="lead">Manufactura controlada, con trazabilidad y controles en cada etapa. El know-how de dispersión y formulación permanece como secreto industrial.</p>
-    <div class="pipe">
-      <div class="step"><b>1 · Preparación</b><span>Preparación de sustratos de vidrio / polímero y formulación del interlayer nano-ingenierizado.</span></div>
-      <div class="arrow">→</div>
-      <div class="step"><b>2 · Ensamblaje</b><span>Apilado del sándwich vidrio / polímero / vidrio según la configuración del proyecto.</span></div>
-      <div class="arrow">→</div>
-      <div class="step"><b>3 · Laminación</b><span>Laminación y procesado isobárico con ciclos de temperatura y presión, documentados para repetibilidad de la dispersión.</span></div>
-      <div class="arrow">→</div>
-      <div class="step"><b>4 · Busing perimetral</b><span>Integración eléctrica en el perímetro con control de calidad: conexión del PV de borde y sellado del ElectroFrame.</span></div>
-      <div class="arrow">→</div>
-      <div class="step"><b>5 · QC final</b><span>Control de calidad final, integración eléctrica y envío de un paño listo para instalar.</span></div>
-    </div>
+<section class="hero">
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800&q=80&auto=format&fit=crop" alt="Torres de vidrio al atardecer desde el suelo" loading="eager">
+  </div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Proceso productivo</span>
+    <h1>Cada panel <span class="grad">se fabrica como una pieza única</span></h1>
+    <p class="sub">Del corte del vidrio al control de calidad: cinco estaciones que convierten dos placas de vidrio y un interlayer en un generador transparente.</p>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
-    <div class="kicker">Detalle técnico</div>
-    <h2>Laminación e integración eléctrica</h2>
+    <span class="kicker">Línea de producción</span>
+    <h2>El recorrido del panel</h2>
+    <figure class="diagram">
+      <svg viewBox="0 0 1140 340" role="img" aria-label="Línea de fabricación: el panel pasa por cinco estaciones">
+        <defs>
+          <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dff1f0"/><stop offset="1" stop-color="#a9ddd6"/></linearGradient>
+          <linearGradient id="belt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c4d9d7"/><stop offset=".5" stop-color="#e2ecef"/><stop offset="1" stop-color="#c4d9d7"/></linearGradient>
+        </defs>
+        <!-- cinta transportadora -->
+        <rect x="30" y="238" width="1080" height="6" rx="3" fill="url(#belt)" class="beltmove"/>
+        <g stroke="#9fb9bd" stroke-width=".8" opacity=".6">
+          <line x1="80" y1="238" x2="80" y2="244"/><line x1="180" y1="238" x2="180" y2="244"/>
+          <line x1="280" y1="238" x2="280" y2="244"/><line x1="380" y1="238" x2="380" y2="244"/>
+          <line x1="480" y1="238" x2="480" y2="244"/><line x1="580" y1="238" x2="580" y2="244"/>
+          <line x1="680" y1="238" x2="680" y2="244"/><line x1="780" y1="238" x2="780" y2="244"/>
+          <line x1="880" y1="238" x2="880" y2="244"/><line x1="980" y1="238" x2="980" y2="244"/>
+        </g>
+        <!-- estaciones -->
+        <g font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#0f2230" text-anchor="middle">
+          <g>
+            <circle cx="140" cy="120" r="30" fill="#fff" stroke="#0fb9a8" stroke-width="1"/>
+            <path d="M132 120h16M140 112v16" stroke="#0fb9a8" stroke-width="1.2"/>
+            <text x="140" y="180">1 · Corte y templado</text>
+            <text x="140" y="196" font-size="10.5" font-weight="400" fill="#7b93a0">vidrio a medida</text>
+          </g>
+          <g>
+            <circle cx="360" cy="120" r="30" fill="#fff" stroke="#0fb9a8" stroke-width="1"/>
+            <rect x="350" y="106" width="20" height="28" rx="2" fill="none" stroke="#0f766e" stroke-width="1.2"/>
+            <path d="M344 120h32" stroke="#0f766e" stroke-width="1.2"/>
+            <text x="360" y="180">2 · Encapsulado interlayer</text>
+            <text x="360" y="196" font-size="10.5" font-weight="400" fill="#7b93a0">capa guía-luz</text>
+          </g>
+          <g>
+            <circle cx="580" cy="120" r="30" fill="#fff" stroke="#0fb9a8" stroke-width="1"/>
+            <path d="M570 126l10-16 10 16z" fill="none" stroke="#0f766e" stroke-width="1.2"/>
+            <text x="580" y="180">3 · Laminación isobárica</text>
+            <text x="580" y="196" font-size="10.5" font-weight="400" fill="#7b93a0">prensado uniforme</text>
+          </g>
+          <g>
+            <circle cx="800" cy="120" r="30" fill="#fff" stroke="#0fb9a8" stroke-width="1"/>
+            <rect x="792" y="112" width="6" height="16" rx="1" fill="#123c48"/>
+            <rect x="802" y="112" width="6" height="16" rx="1" fill="#123c48"/>
+            <path d="M786 120h28" stroke="#0fb9a8" stroke-width="1.2"/>
+            <text x="800" y="180">4 · Busing PV perimetral</text>
+            <text x="800" y="196" font-size="10.5" font-weight="400" fill="#7b93a0">celdas en el borde</text>
+          </g>
+          <g>
+            <circle cx="1020" cy="120" r="30" fill="#fff" stroke="#0fb9a8" stroke-width="1"/>
+            <path d="M1012 128l8-8 8 8M1012 114h16" stroke="#0f766e" stroke-width="1.2" fill="none"/>
+            <text x="1020" y="180">5 · Control de calidad</text>
+            <text x="1020" y="196" font-size="10.5" font-weight="400" fill="#7b93a0">óptico + eléctrico</text>
+          </g>
+        </g>
+        <!-- panel viajando por la cinta -->
+        <g>
+          <rect x="-36" y="214" width="36" height="20" rx="3" fill="url(#pane)" stroke="#7fbdb3" stroke-width=".8"/>
+          <rect x="-4" y="219" width="4" height="10" rx="1" fill="#123c48"/>
+          <animateTransform attributeName="transform" type="translate" values="60 0;1104 0" dur="14s" repeatCount="indefinite"/>
+        </g>
+        <!-- conexiones entre estaciones -->
+        <g stroke="#c4d9d7" stroke-width=".7" stroke-dasharray="3 5">
+          <line x1="172" y1="120" x2="328" y2="120"/>
+          <line x1="392" y1="120" x2="548" y2="120"/>
+          <line x1="612" y1="120" x2="768" y2="120"/>
+          <line x1="832" y1="120" x2="988" y2="120"/>
+        </g>
+        <style>.beltmove{animation:belt 1.2s linear infinite}@keyframes belt{to{transform:translateX(-24px)}}@media (prefers-reduced-motion:reduce){.beltmove{animation:none}}</style>
+      </svg>
+      <figcaption>El panel recorre las cinco estaciones en línea continua; la cinta nunca se detiene.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <span class="kicker">Detalle del proceso</span>
+    <h2>Pasos que definen la calidad</h2>
     <div class="grid2">
-      <div class="card"><span class="num">A</span><h3>Procesado isobárico</h3><p>Los materiales describen laminación y procesado isobárico con ciclos de temperatura y presión, con documentación de cada ciclo para asegurar que la dispersión de nanocápsulas se comporta igual paño a paño.</p></div>
-      <div class="card"><span class="num">B</span><h3>Busing perimetral + QC</h3><p>Integración eléctrica en el borde y control de calidad: el busing conecta las celdas PV perimetrales y el QC verifica continuidad, aislamiento y sellado antes del envío.</p></div>
-      <div class="card"><span class="num">C</span><h3>ElectroFrame</h3><p>Marco de conexión rápida con circuitos ocultos y estandarizados. Gestiona el cableado perimetral, protege la interconexión y permite adaptar el paño a distintas dimensiones y condiciones de fachada.</p></div>
-      <div class="card"><span class="num">D</span><h3>Trazabilidad</h3><p>Cada etapa genera documentación: la manufactura se puede auditar y replicar, manteniendo los parámetros críticos de formulación como secreto industrial.</p></div>
+      <div>
+        <ul class="tl">
+          <li><b>Corte y templado</b> — el vidrio se dimensiona con tolerancias estrictas antes de pasar por horno de temple, que le da su resistencia mecánica.</li>
+          <li><b>Encapsulado del interlayer</b> — la capa guía-luz se posiciona entre los dos vidrios en sala limpia, sin burbujas ni partículas.</li>
+          <li><b>Laminación isobárica</b> — la prensa aplica presión y temperatura uniformes: la adhesión es idéntica en cada punto del panel.</li>
+          <li><b>Busing PV perimetral</b> — las celdas y el cableado se integran en el borde activo y se sellan contra humedad.</li>
+          <li><b>Control de calidad</b> — doble verificación: óptica (transmisión, defectos) y eléctrica (curva I-V del panel terminado).</li>
+        </ul>
+        <div class="callout"><span class="dot"></span><span>El busing perimetral es el paso más delicado: define la vida eléctrica del panel en campo, y por eso se encapsula y se prueba antes de despachar.</span></div>
+      </div>
+      <figure class="diagram">
+        <img src="assets/laminado.svg" alt="Sección del laminado terminado: capas y PV perimetral">
+        <figcaption>El resultado: el laminado terminado con su perímetro activo.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section>
+<section style="border-top:1px solid var(--hair)">
   <div class="wrap">
-    <div class="kicker">Secreto industrial en producción</div>
-    <h2>El know-how no sale de la fábrica</h2>
-    <p class="lead">La capa que no se puede copiar no está en la patente: está en el proceso.</p>
-    <ul class="checklist">
-      <li>Formulación y concentración de nanocápsulas: secretos industriales, no divulgados.</li>
-      <li>Proceso de dispersión con química de surfactantes: propietario.</li>
-      <li>Diseños de equipos seleccionados (incluido un nano-reactor propietario): protegidos.</li>
-      <li>Registros de secreto industrial en soporte duro únicamente, con seguridad física (salas con llave, contenedores resistentes al fuego, cámaras/alarma).</li>
-      <li>NDA/NDNC y control de muestras para empleados y terceros.</li>
-    </ul>
-    <div class="callout"><span class="dot"></span><div><b>Por qué importa.</b> Alguien puede leer la patente y entender el qué, pero sin el cómo (dispersión, parámetros, equipos) no puede fabricar un equivalente competitivo.</div></div>
-  </div>
-</section>
-
-<section class="alt2">
-  <div class="wrap center">
-    <div class="kicker">Escala</div>
-    <h2>Manufactura lista para proyectos reales</h2>
-    <p class="lead" style="margin:0 auto 34px">La consolidación de la capacidad de fabricación es el habilitante de la comercialización. El proceso está documentado para escalar de prototipo a despliegue por fases, sin sacrificar la protección del know-how.</p>
-    <div class="actions" style="justify-content:center">
-      <a class="cta" href="contacto.html">Consultar capacidad</a>
-      <a class="ghost" href="aplicaciones.html">Ver aplicaciones</a>
+    <span class="kicker">Trazabilidad de planta</span>
+    <h2>Reproducibilidad, no artesanía</h2>
+    <div class="photo-grid">
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&auto=format&fit=crop" alt="Construcción con fachada de vidrio" loading="lazy">
+        <figcaption>Instalación en obra</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&q=80&auto=format&fit=crop" alt="Laboratorio de ensayos" loading="lazy">
+        <figcaption>Verificación de laboratorio</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&auto=format&fit=crop" alt="Ciudad con torres iluminadas" loading="lazy">
+        <figcaption>El destino final: la ciudad</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -110,25 +158,24 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>SAF-GLAS | EnergyGlass</h4>
-        <p>Manufactura documentada de vidrio transparente multifunción: defensa, protección y generación de energía.</p>
-        <p class="tagline">Power to Defend. Power to Protect. Power to Generate.</p>
+        <div class="logo">SAF-GLAS<sup class="tm">®</sup> · EnergyGlass</div>
+        <div class="tagline">Transmite · Protege · Genera</div>
       </div>
       <div>
-        <h4>Sitio</h4>
-        <a href="index.html">Inicio</a><a href="tecnologia.html">Tecnología</a><a href="defensa.html">Defensa</a><a href="ip.html">IP &amp; Patentes</a><a href="fabricacion.html">Fabricación</a><a href="aplicaciones.html">Aplicaciones</a><a href="contacto.html">Contacto</a>
+        <h4>Producto</h4>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="fabricacion.html">Fabricación</a>
+        <a href="aplicaciones.html">Aplicaciones</a>
       </div>
       <div>
-        <h4>Oficial</h4>
-        <a href="https://www.saf-glas.com/" target="_blank" rel="noopener">saf-glas.com</a>
+        <h4>Empresa</h4>
+        <a href="defensa.html">Defensa</a>
+        <a href="ip.html">Propiedad intelectual</a>
+        <a href="contacto.html">Contacto</a>
       </div>
     </div>
-    <div class="fbot">
-      <span>© 2026 SAF-GLAS. EnergyGlass es una marca registrada ante USPTO.</span>
-      <span>Los parámetros críticos de formulación son secreto industrial.</span>
-    </div>
+    <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
-
 </body>
 </html>
