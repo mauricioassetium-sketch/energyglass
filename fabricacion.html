@@ -41,68 +41,67 @@
   <div class="wrap">
     <span class="kicker">Línea de producción</span>
     <h2>El recorrido del panel</h2>
-    <figure class="diagram">
-      <svg viewBox="0 0 1140 340" role="img" aria-label="Línea de fabricación: el panel pasa por cinco estaciones">
+    <figure class="diagram reveal">
+      <svg viewBox="0 0 1140 340" role="img" aria-label="Línea de fabricación: el panel pasa por cinco estaciones" class="anim-svg">
         <defs>
-          <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9efe9"/><stop offset="1" stop-color="#6fb9ad"/></linearGradient>
-          <linearGradient id="belt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a4a5c"/><stop offset=".5" stop-color="#3a5c70"/><stop offset="1" stop-color="#2a4a5c"/></linearGradient>
+          <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f8f6"/><stop offset="1" stop-color="#bfe8e5"/></linearGradient>
+          <linearGradient id="belt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c6d9e2"/><stop offset=".5" stop-color="#dfe9ee"/><stop offset="1" stop-color="#c6d9e2"/></linearGradient>
         </defs>
-        <rect x="30" y="238" width="1080" height="6" rx="3" fill="url(#belt)" class="beltmove"/>
-        <g stroke="#3a5c70" stroke-width=".8" opacity=".6">
+        <rect x="30" y="238" width="1080" height="6" rx="3" fill="url(#belt)" class="fade"/>
+        <g stroke="#a9c2cf" stroke-width=".8" opacity=".6" class="fade d1">
           <line x1="80" y1="238" x2="80" y2="244"/><line x1="180" y1="238" x2="180" y2="244"/><line x1="280" y1="238" x2="280" y2="244"/>
           <line x1="380" y1="238" x2="380" y2="244"/><line x1="480" y1="238" x2="480" y2="244"/><line x1="580" y1="238" x2="580" y2="244"/>
           <line x1="680" y1="238" x2="680" y2="244"/><line x1="780" y1="238" x2="780" y2="244"/><line x1="880" y1="238" x2="880" y2="244"/>
           <line x1="980" y1="238" x2="980" y2="244"/>
         </g>
-        <g font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#eaf4fb" text-anchor="middle">
-          <g>
-            <circle cx="140" cy="120" r="30" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
-            <path d="M132 120h16M140 112v16" stroke="#21d4c0" stroke-width="1.2"/>
+        <g font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#48606e" text-anchor="middle">
+          <g class="fade d1">
+            <circle cx="140" cy="120" r="30" fill="#eaf7f5" stroke="#0fb8a6" stroke-width="1"/>
+            <path d="M132 120h16M140 112v16" stroke="#0fb8a6" stroke-width="1.2"/>
             <text x="140" y="180">1 · Corte y templado</text>
-            <text x="140" y="196" font-size="10.5" font-weight="400" fill="#647b8d">vidrio a medida</text>
+            <text x="140" y="196" font-size="10.5" font-weight="400" fill="#8096a3">vidrio a medida</text>
           </g>
-          <g>
-            <circle cx="360" cy="120" r="30" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
-            <rect x="350" y="106" width="20" height="28" rx="2" fill="none" stroke="#21d4c0" stroke-width="1.2"/>
-            <path d="M344 120h32" stroke="#21d4c0" stroke-width="1.2"/>
+          <g class="fade d2">
+            <circle cx="360" cy="120" r="30" fill="#eaf7f5" stroke="#0fb8a6" stroke-width="1"/>
+            <rect x="350" y="106" width="20" height="28" rx="2" fill="none" stroke="#0fb8a6" stroke-width="1.2"/>
+            <path d="M344 120h32" stroke="#0fb8a6" stroke-width="1.2"/>
             <text x="360" y="180">2 · Encapsulado interlayer</text>
-            <text x="360" y="196" font-size="10.5" font-weight="400" fill="#647b8d">capa guía-luz</text>
+            <text x="360" y="196" font-size="10.5" font-weight="400" fill="#8096a3">capa guía-luz</text>
           </g>
-          <g>
-            <circle cx="580" cy="120" r="30" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
-            <path d="M570 126l10-16 10 16z" fill="none" stroke="#21d4c0" stroke-width="1.2"/>
+          <g class="fade d3">
+            <circle cx="580" cy="120" r="30" fill="#eaf7f5" stroke="#0fb8a6" stroke-width="1"/>
+            <path d="M570 126l10-16 10 16z" fill="none" stroke="#0fb8a6" stroke-width="1.2"/>
             <text x="580" y="180">3 · Laminación isobárica</text>
-            <text x="580" y="196" font-size="10.5" font-weight="400" fill="#647b8d">prensado uniforme</text>
+            <text x="580" y="196" font-size="10.5" font-weight="400" fill="#8096a3">prensado uniforme</text>
           </g>
-          <g>
-            <circle cx="800" cy="120" r="30" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
-            <rect x="792" y="112" width="6" height="16" rx="1" fill="#123c48"/>
-            <rect x="802" y="112" width="6" height="16" rx="1" fill="#123c48"/>
-            <path d="M786 120h28" stroke="#21d4c0" stroke-width="1.2"/>
+          <g class="fade d4">
+            <circle cx="800" cy="120" r="30" fill="#eaf7f5" stroke="#0fb8a6" stroke-width="1"/>
+            <rect x="792" y="112" width="6" height="16" rx="1" fill="#0fa896"/>
+            <rect x="802" y="112" width="6" height="16" rx="1" fill="#0fa896"/>
+            <path d="M786 120h28" stroke="#0fb8a6" stroke-width="1.2"/>
             <text x="800" y="180">4 · Busing PV perimetral</text>
-            <text x="800" y="196" font-size="10.5" font-weight="400" fill="#647b8d">células en el borde</text>
+            <text x="800" y="196" font-size="10.5" font-weight="400" fill="#8096a3">células en el borde</text>
           </g>
-          <g>
-            <circle cx="1020" cy="120" r="30" fill="#0e1a28" stroke="#21d4c0" stroke-width="1"/>
-            <path d="M1012 128l8-8 8 8 M1012 114h16" stroke="#21d4c0" stroke-width="1.2" fill="none"/>
+          <g class="fade d4">
+            <circle cx="1020" cy="120" r="30" fill="#eaf7f5" stroke="#0fb8a6" stroke-width="1"/>
+            <path d="M1012 128l8-8 8 8 M1012 114h16" stroke="#0fb8a6" stroke-width="1.2" fill="none"/>
             <text x="1020" y="180">5 · Control de calidad</text>
-            <text x="1020" y="196" font-size="10.5" font-weight="400" fill="#647b8d">óptico + eléctrico</text>
+            <text x="1020" y="196" font-size="10.5" font-weight="400" fill="#8096a3">óptico + eléctrico</text>
           </g>
         </g>
-        <g>
-          <rect x="-36" y="214" width="36" height="20" rx="3" fill="url(#pane)" stroke="#2a5570" stroke-width=".8"/>
-          <rect x="-4" y="219" width="4" height="10" rx="1" fill="#123c48"/>
+        <g class="fade d3">
+          <rect x="-36" y="214" width="36" height="20" rx="3" fill="url(#pane)" stroke="#9fc9c4" stroke-width=".8"/>
+          <rect x="-4" y="219" width="4" height="10" rx="1" fill="#0fa896"/>
           <animateTransform attributeName="transform" type="translate" values="60 0;1104 0" dur="14s" repeatCount="indefinite"/>
         </g>
-        <g stroke="#3a5c70" stroke-width=".7" stroke-dasharray="3 5">
+        <g stroke="#a9c2cf" stroke-width=".7" stroke-dasharray="3 5" class="fade d2">
           <line x1="172" y1="120" x2="328" y2="120"/>
           <line x1="392" y1="120" x2="548" y2="120"/>
           <line x1="612" y1="120" x2="768" y2="120"/>
           <line x1="832" y1="120" x2="988" y2="120"/>
         </g>
-        <style>.beltmove{animation:belt 1.2s linear infinite}@keyframes belt{to{transform:translateX(-24px)}}@media (prefers-reduced-motion:reduce){.beltmove{animation:none}}</style>
       </svg>
-      <figcaption>El panel recorre las cinco estaciones en línea continua; la cinta nunca se detiene.</figcaption>
+      <figcaption>El panel recorre las cinco estaciones en línea continua; la cadena de valor empieza en el vidrio y termina en la verificación.</figcaption>
     </figure>
   </div>
 </section>
@@ -112,7 +111,7 @@
     <span class="kicker">Detalle del proceso</span>
     <h2>Pasos que definen la calidad</h2>
     <div class="grid2">
-      <div>
+      <div class="reveal">
         <ul class="tl">
           <li><b>Corte y templado</b> — el vidrio se dimensiona con tolerancias estrictas antes de pasar por horno de temple, que le da su resistencia mecánica.</li>
           <li><b>Encapsulado del interlayer</b> — la capa guía-luz se posiciona entre los dos vidrios en sala limpia, sin burbujas ni partículas.</li>
@@ -122,7 +121,7 @@
         </ul>
         <div class="callout"><span class="dot"></span><span>El busing perimetral es el paso más delicado: define la vida eléctrica del panel en campo, y por eso se encapsula y se prueba antes de despachar.</span></div>
       </div>
-      <figure class="diagram">
+      <figure class="diagram reveal">
         <img src="assets/laminado.svg" alt="Sección del laminado terminado: capas y PV perimetral">
         <figcaption>El resultado: el laminado terminado con su perímetro activo.</figcaption>
       </figure>
@@ -135,15 +134,15 @@
     <span class="kicker">Trazabilidad de planta</span>
     <h2>Reproducibilidad, no artesanía</h2>
     <div class="photo-grid">
-      <figure class="photo">
+      <figure class="photo reveal">
         <img src="https://images.unsplash.com/photo-1503353761524-478922ad6e43?w=1200&q=80&auto=format&fit=crop" alt="Construcción con fachada de vidrio" loading="lazy">
         <figcaption>Instalación en obra</figcaption>
       </figure>
-      <figure class="photo">
-        <img src="https://images.unsplash.com/photo-1532094349884-543bc234d?w=1200&q=80&auto=format&fit=crop" alt="Laboratorio de ensayos" loading="lazy">
+      <figure class="photo reveal">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&q=80&auto=format&fit=crop" alt="Laboratorio de ensayo" loading="lazy">
         <figcaption>Verificación de laboratorio</figcaption>
       </figure>
-      <figure class="photo">
+      <figure class="photo reveal">
         <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&auto=format&fit=crop" alt="Ciudad con torres iluminadas" loading="lazy">
         <figcaption>El destino final: la ciudad</figcaption>
       </figure>
@@ -174,5 +173,6 @@
     <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
