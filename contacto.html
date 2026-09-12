@@ -3,81 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto | EnergyGlass - Háblanos de tu proyecto</title>
-<meta name="description" content="Contacta con SAF-GLAS para proyectos de vidrio transparente multifunción: seguridad, resiliencia, energía y agricultura.">
+<title>Contacto · SAF-GLAS EnergyGlass</title>
+<meta name="description" content="Contacta con el equipo de EnergyGlass para proyectos, alianzas y licencias.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="nav">
+<header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html">
-      <svg width="36" height="24" viewBox="0 0 112 44" fill="none">
-        <defs><linearGradient id="egA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13e0c5"/><stop offset="1" stop-color="#007566"/></linearGradient></defs>
-        <rect x="4" y="4" width="9" height="36" rx="4.5" fill="url(#egA)"/>
-        <rect x="19" y="6" width="72" height="7" rx="3.5" fill="url(#egA)"/>
-        <rect x="19" y="18.5" width="92" height="7" rx="3.5" fill="url(#egA)"/>
-        <rect x="19" y="31" width="54" height="7" rx="3.5" fill="url(#egA)"/>
-      </svg>
-      EnergyGlass<span class="tm">™</span>
-    </a>
-    <div class="navmenu">
+    <a class="logo" href="index.html">SAF-GLAS<sup class="tm">®</sup> · EnergyGlass</a>
+    <nav class="navmenu">
       <a href="index.html">Inicio</a>
       <a href="tecnologia.html">Tecnología</a>
       <a href="defensa.html">Defensa</a>
-      <a href="ip.html">IP &amp; Patentes</a>
+      <a href="ip.html">Propiedad intelectual</a>
       <a href="fabricacion.html">Fabricación</a>
       <a href="aplicaciones.html">Aplicaciones</a>
-    </div>
-    <a class="cta" href="contacto.html">Contacto</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-inner">
-      <div class="eyebrow">Contacto</div>
-      <h1>Háblanos de tu <span class="grad">proyecto</span></h1>
-      <p class="sub">Seguridad, resiliencia, energía o agricultura. Cuéntanos qué necesitas lograr con el vidrio y el equipo de SAF-GLAS te ayuda a modelar la configuración adecuada.</p>
-    </div>
-  </div>
-  <div class="cityband">
-    <img src="assets/city-energy.svg" alt="Contacto SAF-GLAS">
+      <a class="on" href="contacto.html">Contacto</a>
+    </nav>
   </div>
 </header>
 
+<section class="hero">
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1800&q=80&auto=format&fit=crop" alt="Fachada de vidrio de un edificio moderno" loading="eager">
+  </div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Hablemos</span>
+    <h1>Construyamos <span class="grad">la próxima fachada</span></h1>
+    <p class="sub">Proyectos, alianzas o licencias: cuéntanos qué estás levantando y el equipo de EnergyGlass te responde.</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
-    <div class="grid2" style="align-items:start">
+    <div class="grid2">
       <div>
-        <div class="kicker">Correo</div>
-        <h2>Formulario de contacto</h2>
-        <form onsubmit="alert('Gracias. Tu mensaje está listo para enviar al equipo SAF-GLAS.');return false;" style="display:flex;flex-direction:column;gap:14px;margin-top:24px">
-          <input type="text" name="nombre" placeholder="Nombre" style="padding:13px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit" required>
-          <input type="email" name="email" placeholder="Correo electrónico" style="padding:13px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit" required>
-          <select name="aplicacion" style="padding:13px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit;background:#fff">
-            <option>Fachadas comerciales</option>
-            <option>Gobierno + seguridad</option>
-            <option>Costero + resiliente</option>
-            <option>Agricultura / invernaderos</option>
-            <option>Diseño especializado</option>
-            <option>Otro</option>
-          </select>
-          <textarea name="mensaje" rows="5" placeholder="Cuéntanos tu proyecto, dimensiones y prioridad (seguridad, energía, luz, etc.)" style="padding:13px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit;resize:vertical"></textarea>
-          <button type="submit" class="cta" style="border:none;cursor:pointer;font-size:15px;align-self:flex-start">Enviar consulta</button>
+        <span class="kicker">Vías de contacto</span>
+        <h2>Escoge la que mejor te venga</h2>
+        <table class="tbl">
+          <tr><th>Canal</th><th>Para</th></tr>
+          <tr><td>Proyectos y obra</td><td>Integrar EnergyGlass en fachadas, invernaderos o edificios críticos.</td></tr>
+          <tr><td>Alianzas</td><td>Fabricantes y promotores interesados en licenciar la tecnología.</td></tr>
+          <tr><td>Prensa</td><td>Información técnica y material verificable para medios.</td></tr>
+        </table>
+        <div class="callout"><span class="dot"></span><span>Respondemos con datos y sin promesas: cada petición se atiende con las cifras reales de la configuración que propones.</span></div>
+      </div>
+      <div class="card">
+        <h3>Deja tu mensaje</h3>
+        <form action="mailto:contacto@energyglass.example" method="post" enctype="text/plain">
+          <p style="margin-bottom:6px"><label for="nombre">Nombre</label></p>
+          <p><input id="nombre" name="nombre" type="text" placeholder="Tu nombre" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px"></p>
+          <p style="margin-bottom:6px"><label for="email">Correo</label></p>
+          <p><input id="email" name="email" type="email" placeholder="tu@correo.com" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px"></p>
+          <p style="margin-bottom:6px"><label for="msg">Mensaje</label></p>
+          <p><textarea id="msg" name="mensaje" rows="4" placeholder="Cuéntanos tu proyecto" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px"></textarea></p>
+          <p><button type="submit" class="cta">Enviar mensaje</button></p>
         </form>
       </div>
-      <div>
-        <div class="kicker">Contacto directo</div>
-        <h2>Información de contacto</h2>
-        <table class="tbl">
-          <tr><td>Sitio oficial</td><td><a href="https://www.saf-glas.com/" target="_blank" rel="noopener" style="color:var(--teal-dark);font-weight:700">saf-glas.com</a></td></tr>
-          <tr><td>Energía</td><td><a href="https://www.energyglass.com/" target="_blank" rel="noopener" style="color:var(--teal-dark);font-weight:700">energyglass.com</a></td></tr>
-          <tr><td>Marca</td><td>EnergyGlass™ registrada ante USPTO</td></tr>
-          <tr><td>Patente</td><td>U.S. Patent 9,553,219 B2</td></tr>
-        </table>
-        <div class="callout"><span class="dot"></span><div><b>Nota.</b> Este sitio es una presentación de la plataforma. Para propuestas comerciales, licenciamiento o due diligence, contacta por los canales oficiales de SAF-GLAS.</div></div>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <div class="photo-grid2">
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1487958449943-880ed4149d6e?w=1200&q=80&auto=format&fit=crop" alt="Torre comercial de vidrio" loading="lazy">
+        <figcaption>Donde trabajamos: en la envolvente del edificio</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&auto=format&fit=crop" alt="Ciudad iluminada" loading="lazy">
+        <figcaption>El resultado, ciudad a ciudad</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -86,26 +84,24 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>SAF-GLAS | EnergyGlass</h4>
-        <p>Plataforma de vidrio transparente multifunción: defensa, protección y generación de energía en un solo producto.</p>
-        <p class="tagline">Power to Defend. Power to Protect. Power to Generate.</p>
+        <div class="logo">SAF-GLAS<sup class="tm">®</sup> · EnergyGlass</div>
+        <div class="tagline">Transmite · Protege · Genera</div>
       </div>
       <div>
-        <h4>Sitio</h4>
-        <a href="index.html">Inicio</a><a href="tecnologia.html">Tecnología</a><a href="defensa.html">Defensa</a><a href="ip.html">IP &amp; Patentes</a><a href="fabricacion.html">Fabricación</a><a href="aplicaciones.html">Aplicaciones</a><a href="contacto.html">Contacto</a>
+        <h4>Producto</h4>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="fabricacion.html">Fabricación</a>
+        <a href="aplicaciones.html">Aplicaciones</a>
       </div>
       <div>
-        <h4>Oficial</h4>
-        <a href="https://www.saf-glas.com/" target="_blank" rel="noopener">saf-glas.com</a>
-        <a href="https://www.energyglass.com/" target="_blank" rel="noopener">energyglass.com</a>
+        <h4>Empresa</h4>
+        <a href="defensa.html">Defensa</a>
+        <a href="ip.html">Propiedad intelectual</a>
+        <a href="contacto.html">Contacto</a>
       </div>
     </div>
-    <div class="fbot">
-      <span>© 2026 SAF-GLAS. EnergyGlass es una marca registrada ante USPTO.</span>
-      <span>La validación depende del proyecto y, en agronomía, del cultivo y clima.</span>
-    </div>
+    <div class="fbot"><span>© 2026 SAF-GLAS · EnergyGlass</span><span>Especificaciones declaradas sujetas a validación por proyecto</span></div>
   </div>
 </footer>
-
 </body>
 </html>
