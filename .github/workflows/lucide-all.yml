@@ -16,27 +16,26 @@ jobs:
         run: |
           python3 - <<'PY'
           import re, os
-          # (archivo, clave_del_h3, nombre_lucide)
           MAP = [
-            ('aplicaciones.html', 'Batería',           'battery-charging'),
-            ('aplicaciones.html', 'Conexión a red',    'plug'),
-            ('aplicaciones.html', 'Corriente continua / LED', 'lightbulb'),
-            ('defensa.html', 'Desastres naturales',    'cloud-lightning'),
-            ('defensa.html', 'Balística',              'target'),
-            ('defensa.html', 'Explosión',              'bomb'),
-            ('defensa.html', 'Incendios',              'shield-alert'),
-            ('defensa.html', 'Intrusión forzada',      'door-open'),
-            ('defensa.html', 'Institucional',          'landmark'),
-            ('fabricacion.html', 'Vidrios de 6 mm',    'layers'),
-            ('fabricacion.html', 'Film de unión patentado', 'link'),
-            ('fabricacion.html', 'Laminado y sellado', 'package'),
-            ('ip.html', 'Fórmula del interlayer',      'flask-conical'),
-            ('ip.html', 'Film de unión',               'link'),
-            ('ip.html', 'Colectores de borde',         'zap'),
-            ('ip.html', 'Documentación',               'file-text'),
-            ('tecnologia.html', 'Dos vidrios, una película', 'layers'),
-            ('tecnologia.html', 'Guía hacia el borde', 'route'),
-            ('tecnologia.html', 'Colectores de borde', 'zap'),
+              ('aplicaciones.html', 'Baterías',             'battery-charging'),
+              ('aplicaciones.html', 'Conexión a red',       'plug'),
+              ('aplicaciones.html', 'DC directo / LED',     'lightbulb'),
+              ('defensa.html', 'Desastres naturales',       'cloud-lightning'),
+              ('defensa.html', 'Balística',                 'target'),
+              ('defensa.html', 'Explosión',                 'bomb'),
+              ('defensa.html', 'Incendios',                 'flame'),
+              ('defensa.html', 'Intrusión forzada',         'door-open'),
+              ('defensa.html', 'Institucional',             'landmark'),
+              ('fabricacion.html', 'Vidrios de 6 mm',       'layers'),
+              ('fabricacion.html', 'Film de unión patentado', 'link'),
+              ('fabricacion.html', 'Laminado y sellado',    'package'),
+              ('ip.html', 'Fórmula del interlayer',         'flask-conical'),
+              ('ip.html', 'Film de unión',                  'link'),
+              ('ip.html', 'Colectores de borde',            'zap'),
+              ('ip.html', 'Documentación',                  'file-text'),
+              ('tecnologia.html', 'Dos vidrios, una película', 'layers'),
+              ('tecnologia.html', 'Guía hacia el borde',    'route'),
+              ('tecnologia.html', 'Colectores de borde',    'zap'),
           ]
           ICON_DIR = 'node_modules/lucide-static/icons'
           total = 0
@@ -49,7 +48,6 @@ jobs:
               svg = svg.replace('width="24" height="24"', 'width="30" height="30"')
               svg = svg.replace('stroke-width="2"', 'stroke-width="2.75"')
               html = open(fname, encoding='utf-8').read()
-              # localizar el bloque <span class="ico">…</span> que precede al <h3>…</h3>
               pat = re.compile(
                   r'(<span class="ico">.*?</span>)(\s*<h3>' + re.escape(key) + r'</h3>)',
                   re.DOTALL
