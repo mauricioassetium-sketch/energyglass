@@ -1,0 +1,62 @@
+name: swap-icons-once
+on:
+  push:
+    paths:
+      - '.github/workflows/swap-icons.yml'
+permissions:
+  contents: write
+jobs:
+  swap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: swap-emoji-for-svg
+        run: |
+          python3 - <<'PY'
+          import re
+          s = open('index.html', encoding='utf-8').read()
+          mapa = {
+            'dificios': 'icons/edificios.svg',
+            'nvernadero': 'icons/invernaderos.svg',
+            'eguridad': 'icons/defensa.svg',
+            'ecnolog': 'icons/tecnologia.svg',
+            'abricaci': 'icons/fabricacion.svg',
+            'ropiedad': 'icons/propiedad.svg',
+          }
+          pat = re.compile(r'(<span class="ico">)(.*?)(</span>)', re.S)
+          count = 0
+          def repl(m):
+              global count
+              after = s[m.end():m.end()+400]
+              h3 = re.search(r'<h3>(.*?)</h3>', after)
+              title = (h3.group(1) if h3 else '').lower()
+              for k, path in mapa.items():
+                  if k in title:
+                      count += 1
+                      return m.group(1) + '<img src="' + path + '" alt="" aria-hidden="true" width="30" height="30">' + m.group(3)
+              return m.group(0)
+          nuevo = pat.sub(repl, s)
+          open('index.html', 'w', encoding='utf-8').write(nuevo)
+          rep = ['replaced=%d' % count]
+          for mm in re.finditer(r'<span class="ico">(?!<img)[^<]*</span>', nuevo):
+              ctx = nuevo[mm.end():mm.end()+300]
+              h3 = re.search(r'<h3>(.*?)</h3>', ctx)
+              rep.append('REMAINING ico: %r -> h3=%r' % (mm.group(0), h3.group(1) if h3 else '?'))
+          ep = re.compile('[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF]')
+          for i, line in enumerate(nuevo.split('\n')):
+              if ep.search(line) and '<img' not in line:
+                  rep.append('EMOJI line %d: %s' % (i+1, line.strip()[:90]))
+          open('icons/_inventory.txt', 'w', encoding='utf-8').write('\n'.join(rep) + '\n')
+          print('\n'.join(rep))
+          PY
+          printf '\n/* iconos duotono SVG */\n.ico img{width:30px;height:30px;vertical-align:middle}\n' >> style.css
+          grep -c '</html>' index.html
+          wc -c index.html style.css
+      - name: commit-push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html style.css icons/_inventory.txt
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "iconos: reemplazar emoji por SVG duotono (6 categorias) + CSS"; git push; fi
