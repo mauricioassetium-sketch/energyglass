@@ -1,19 +1,19 @@
 /* ============================================================
-   EnergyGlass — SAF-GLAS · corporate redesign (estilo PwC)
-   Paleta: verde vidrio / teal + ámbar solar + neutros claros
+   EnergyGlass™ — SAF-GLAS redesign (PwC style)
+   Palette: glass green / teal + solar amber + light neutrals
    ============================================================ */
 :root{
-  --green:#0b7a5c;           /* verde vidrio principal */
-  --green-dk:#0a3d31;        /* verde oscuro (secciones) */
-  --green-deep:#072a23;      /* footer / casi-negro */
-  --teal:#0fb8a6;            /* acento agua */
-  --amber:#f2b23b;           /* ámbar / sol */
+  --green:#0b7a5c;           /* glass green principal */
+  --green-dk:#0a3d31;        /* dark green (sections) */
+  --green-deep:#072a23;      /* footer / near-black */
+  --teal:#0fb8a6;            /* aqua accent */
+  --amber:#f2b23b;           /* amber / sun */
   --amber-dk:#e09e1f;
-  --ink:#12212b;             /* texto */
-  --ink-soft:#5a6b72;        /* texto secundario */
-  --paper:#ffffff;           /* fondo blanco */
-  --paper-t:#f5f8f7;         /* gris verdoso claro */
-  --line:#e2e9e7;            /* bordes */
+  --ink:#12212b;             /* text */
+  --ink-soft:#5a6b72;        /* secondary text */
+  --paper:#ffffff;           /* white bg */
+  --paper-t:#f5f8f7;         /* light greenish gray */
+  --line:#e2e9e7;            /* borders */
   --font:'Helvetica Neue',Arial,'Segoe UI',Roboto,sans-serif;
   --serif:Georgia,'Times New Roman',serif;
   --wrap:1180px;
@@ -58,23 +58,21 @@ a{color:inherit;text-decoration:none}
 .navmenu .cta:hover{background:var(--amber-dk);color:#221500}
 
 /* ---- hero ---- */
-.hero{position:relative;background:var(--green-dk);color:#fff;overflow:hidden}
+.hero{position:relative;background:var(--green-deep);color:#fff;overflow:hidden}
 .hero-photo{position:absolute;inset:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;opacity:.55}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,42,35,.92) 0%,rgba(7,42,35,.72) 46%,rgba(7,42,35,.30) 78%,rgba(7,42,35,.10) 100%)}
-.hero-inner{position:relative;padding:96px 24px 84px;max-width:var(--wrap);margin:0 auto}
-.hero-grid{
-  display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;
-}
-.hero-copy{max-width:640px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,34,27,.94) 0%,rgba(6,34,27,.86) 40%,rgba(6,34,27,.52) 68%,rgba(6,34,27,.16) 100%)}
+.hero-inner{position:relative;padding:96px 24px 88px;max-width:var(--wrap);margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:center}
+.hero-copy{max-width:660px}
 .eyebrow{
   display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;
   text-transform:uppercase;color:var(--amber);margin-bottom:18px;
 }
-.hero h1{font-size:50px;line-height:1.06;font-weight:700;letter-spacing:-1.2px;max-width:700px}
+.hero h1{font-size:52px;line-height:1.06;font-weight:700;letter-spacing:-1.2px;max-width:720px;text-shadow:0 2px 24px rgba(0,0,0,.5)}
 .hero h1 .thin{font-weight:400;color:#cfe7e1}
-.hero .sub{font-size:20px;color:#d7ebe6;max-width:640px;margin:22px 0 30px}
-.hero-art{display:flex;align-items:center;justify-content:center}
+.hero .sub{font-size:20px;color:#d7ebe6;max-width:640px;margin:22px 0 30px;text-shadow:0 1px 16px rgba(0,0,0,.55)}
+.hero-art{display:none}
 .hero-svg{width:100%;height:auto;max-width:560px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35))}
 .btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn{
@@ -165,7 +163,7 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in-view{opacity:1;transform:none}
 
-/* === Iconos personalizados (SVG inline) === */
+/* === Inline SVG icons === */
 .ico-svg{
   width:56px;height:56px;color:var(--green);
   display:inline-block;vertical-align:middle;flex:0 0 auto;
@@ -181,8 +179,7 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .icon-chip.amber{background:var(--amber);border-color:var(--amber)}
 .icon-chip.amber .ico-svg{color:#221500}
 
-/* Animación de dibujo: cada trazo se dibuja al entrar en pantalla,
-   con fade suave del conjunto y settle final */
+/* Animated drawing: strokes draw on enter, with soft fade + settle */
 .ico-svg .d{
   fill:none;
   stroke-dasharray:200;
@@ -200,10 +197,10 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 /* ---- responsive ---- */
 @media(max-width:920px){
   .navmenu{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-art{order:-1}
+  .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero-art{display:none}
   .hero-svg{max-width:420px}
-  .hero-veil{background:linear-gradient(180deg,rgba(7,42,35,.55) 0%,rgba(7,42,35,.88) 100%)}
+  .hero-veil{background:linear-gradient(180deg,rgba(6,34,27,.72) 0%,rgba(6,34,27,.88) 100%)}
   .grid3,.grid2,.split{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
   .photos{grid-template-columns:1fr}
