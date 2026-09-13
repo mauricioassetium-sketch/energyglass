@@ -203,6 +203,7 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .hero-art{order:-1}
   .hero-svg{max-width:420px}
+  .hero-veil{background:linear-gradient(180deg,rgba(7,42,35,.55) 0%,rgba(7,42,35,.88) 100%)}
   .grid3,.grid2,.split{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
   .photos{grid-template-columns:1fr}
