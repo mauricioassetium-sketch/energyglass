@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" fill="none" role="img" aria-label="Invernadero EnergyGlass generando energía con paneles solares">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3d31"/>
+      <stop offset="1" stop-color="#072a23"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0fb8a6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#0b7a5c" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#0fb8a6" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d6b86"/>
+      <stop offset="1" stop-color="#0a4457"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" fill="url(#sky)"/>
+
+  <!-- sol -->
+  <g>
+    <circle cx="800" cy="110" r="46" fill="#f2b23b"/>
+    <circle cx="800" cy="110" r="46" fill="none" stroke="#f2b23b" stroke-opacity=".35" stroke-width="3">
+      <animate attributeName="r" values="46;66;46" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".35;0;.35" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- rayos -->
+  <g stroke="#f2b23b" stroke-linecap="round">
+    <line x1="800" y1="40" x2="800" y2="26" stroke-width="5">
+      <animate attributeName="y2" values="26;36;26" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="746" y1="110" x2="728" y2="110" stroke-width="5">
+      <animate attributeName="x2" values="728;738;728" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;.3;1" dur="1.9s" repeatCount="indefinite"/>
+    </line>
+    <line x1="854" y1="110" x2="872" y2="110" stroke-width="5">
+      <animate attributeName="x2" values="872;862;872" dur="2.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;.3;1" dur="2.1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="754" y1="68" x2="742" y2="58" stroke-width="5">
+      <animate attributeName="y2" values="58;66;58" dur="1.7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="846" y1="64" x2="858" y2="54" stroke-width="5">
+      <animate attributeName="y2" values="54;62;54" dur="2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- terreno -->
+  <path d="M0 480 L960 480 L960 640 L0 640 Z" fill="#0a3329"/>
+
+  <!-- invernadero: estructura -->
+  <g>
+    <rect x="320" y="300" width="280" height="180" rx="4" fill="url(#glass)"/>
+    <rect x="320" y="300" width="280" height="180" rx="4" fill="url(#pane)"/>
+    <path d="M320 300 L340 300 L340 480 M460 300 L460 480 M600 300 L580 300 L580 480" stroke="#7fd6cc" stroke-opacity=".8" stroke-width="5"/>
+    <path d="M320 300 L460 222 L600 300" fill="none" stroke="#0fb8a6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M320 300 L460 222 L600 300" fill="none" stroke="#7fd6cc" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 10" opacity=".7">
+      <animate attributeName="stroke-dashoffset" values="0;-48;0" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <line x1="460" y1="222" x2="460" y2="480" stroke="#7fd6cc" stroke-opacity=".8" stroke-width="5"/>
+  </g>
+  <!-- brote creciendo dentro -->
+  <g stroke="#9be8a0" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M460 480 C452 440 448 420 460 396">
+      <animate attributeName="d" values="M460 480 C456 470 456 468 460 480;M460 480 C452 440 448 420 460 396;M460 480 C452 440 448 420 460 396" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M460 416 C470 406 478 404 486 410" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M460 398 C450 388 442 386 434 392" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" dur="5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- paneles solares inclinados -->
+  <g transform="translate(120 378) rotate(-14)">
+    <rect x="0" y="0" width="150" height="18" rx="3" fill="url(#panel)"/>
+    <path d="M18 0 L18 18 M46 0 L46 18 M74 0 L74 18 M102 0 L102 18 M130 0 L130 18" stroke="#0fb8a6" stroke-opacity=".55" stroke-width="3"/>
+  </g>
+  <g transform="translate(710 360) rotate(14)">
+    <rect x="0" y="0" width="150" height="18" rx="3" fill="url(#panel)"/>
+    <path d="M18 0 L18 18 M46 0 L46 18 M74 0 L74 18 M102 0 L102 18 M130 0 L130 18" stroke="#0fb8a6" stroke-opacity=".55" stroke-width="3"/>
+  </g>
+
+  <!-- partículas de energía subiendo -->
+  <g fill="#f2b23b">
+    <circle cx="70" cy="340" r="7">
+      <animate attributeName="cy" values="340;220;340" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="890" cy="330" r="6">
+      <animate attributeName="cy" values="330;210;330" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="330" r="5">
+      <animate attributeName="cy" values="330;230;330" dur="4s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="340" r="5">
+      <animate attributeName="cy" values="340;240;340" dur="4.8s" begin=".6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4.8s" begin=".6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
