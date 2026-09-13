@@ -1,0 +1,29 @@
+name: fix-hero-once
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-hero.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: restore-index
+        run: git checkout 2ce8e58cd2f52be5f36c976e92218a538afa3f00 -- index.html
+      - name: swap-hero
+        run: |
+          sed -i 's|photo-1758646652209-a7392490ba72|photo-1649600584742-c78966e0464e|' index.html
+          sed -i 's|Invernadero de vidrio junto a un edificio con paneles solares|Invernadero moderno de vidrio para agricultura protegida|' index.html
+          grep -n 'photo-1649600584742' index.html
+          grep -c '</html>' index.html
+          wc -c index.html
+      - name: commit-push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "index: restaurar archivo completo y hero con foto real de invernadero de vidrio"; git push; fi
