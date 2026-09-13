@@ -10,72 +10,70 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Cache lucide-static
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: /opt/lucide
-          key: lucide-static-0.460.0
-      - name: Install lucide-static
-        if: steps.cache.outputs.cache-hit != 'true'
+      - name: install lucide-static
+        run: npm install --no-save lucide-static@0.460.0
+      - name: swap emoji for lucide svg
         run: |
-          npm init -y >/dev/null 2>&1
-          npm install lucide-static@0.460.0 --prefix /opt/lucide >/dev/null 2>&1
-      - name: Swap emoji for Lucide SVG
-        id: swap
+          python3 - <<'PY'
+          import re, os
+          # (archivo, clave_del_h3, nombre_lucide)
+          MAP = [
+            ('aplicaciones.html', 'Batería',           'battery-charging'),
+            ('aplicaciones.html', 'Conexión a red',    'plug'),
+            ('aplicaciones.html', 'Corriente continua / LED', 'lightbulb'),
+            ('defensa.html', 'Desastres naturales',    'cloud-lightning'),
+            ('defensa.html', 'Balística',              'target'),
+            ('defensa.html', 'Explosión',              'bomb'),
+            ('defensa.html', 'Incendios',              'shield-alert'),
+            ('defensa.html', 'Intrusión forzada',      'door-open'),
+            ('defensa.html', 'Institucional',          'landmark'),
+            ('fabricacion.html', 'Vidrios de 6 mm',    'layers'),
+            ('fabricacion.html', 'Film de unión patentado', 'link'),
+            ('fabricacion.html', 'Laminado y sellado', 'package'),
+            ('ip.html', 'Fórmula del interlayer',      'flask-conical'),
+            ('ip.html', 'Film de unión',               'link'),
+            ('ip.html', 'Colectores de borde',         'zap'),
+            ('ip.html', 'Documentación',               'file-text'),
+            ('tecnologia.html', 'Dos vidrios, una película', 'layers'),
+            ('tecnologia.html', 'Guía hacia el borde', 'route'),
+            ('tecnologia.html', 'Colectores de borde', 'zap'),
+          ]
+          ICON_DIR = 'node_modules/lucide-static/icons'
+          total = 0
+          for fname, key, icon in MAP:
+              src = os.path.join(ICON_DIR, icon + '.svg')
+              if not os.path.exists(src):
+                  print('MISSING ICON: ' + src)
+                  sys.exit(1)
+              svg = open(src, encoding='utf-8').read()
+              svg = svg.replace('width="24" height="24"', 'width="30" height="30"')
+              svg = svg.replace('stroke-width="2"', 'stroke-width="2.75"')
+              html = open(fname, encoding='utf-8').read()
+              # localizar el bloque <span class="ico">…</span> que precede al <h3>…</h3>
+              pat = re.compile(
+                  r'(<span class="ico">.*?</span>)(\s*<h3>' + re.escape(key) + r'</h3>)',
+                  re.DOTALL
+              )
+              m = pat.search(html)
+              if not m:
+                  print(f'NO MATCH: {fname} :: {key}')
+                  sys.exit(1)
+              html = html.replace(m.group(1), svg, 1)
+              open(fname, 'w', encoding='utf-8').write(html)
+              total += 1
+              print(f'ok {fname} :: {key} -> {icon}')
+          open('icons/_inventory.txt', 'w', encoding='utf-8').write(f'lucide inlined={total}\n')
+          print('inlined=' + str(total))
+          if total != 19:
+              sys.exit('ERROR: expected 19 icons, inlined ' + str(total))
+          PY
+      - name: commit-push
         run: |
-          set -e
-          ICON_DIR="/opt/lucide/node_modules/lucide-static/icons"
-          lucide() {
-            local name="$1"
-            sed -e 's/<svg /<svg class="ico" role="img" aria-hidden="true" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /' "$ICON_DIR/$name.svg"
-          }
-          inline() {
-            local f="$1"; local h3="$2"; local icon="$3"
-            python3 - "$f" "$h3" "$icon" <<'PYEOF'
-import sys, re
-f, h3, icon = sys.argv[1], sys.argv[2], sys.argv[3]
-html = open(f, encoding='utf-8').read()
-pat = re.compile(r'(<h3>' + re.escape(h3) + r'</h3>)')
-before = html[:html.find(h3)]
-# localizar el span.ico justo antes del h3
-m = re.search(r'<span class="ico">[^<]*</span>\s*<h3>' + re.escape(h3), html)
-if not m:
-    print(f"NO MATCH {f} :: {h3}", file=sys.stderr); sys.exit(1)
-new = html.replace(m.group(0), icon + '<h3>' + h3 + '</h3>', 1)
-open(f, 'w', encoding='utf-8').write(new)
-print(f"ok {f} :: {h3}")
-PYEOF
-          }
-          cd "$GITHUB_WORKSPACE"
-          d() { echo "\$PWD"; }
-          # aplicaciones.html
-          inline aplicaciones.html "Batería"       "$(lucide battery-charging)" 
-          inline aplicaciones.html "Conexión a red" "$(lucide plug)"
-          inline aplicaciones.html "DC directo / LED" "$(lucide lightbulb)"
-          # defensa.html
-          inline defensa.html "Desastres naturales" "$(lucide cloud-lightning)"
-          inline defensa.html "Balística"          "$(lucide target)"
-          inline defensa.html "Explosión"          "$(lucide bomb)"
-          inline defensa.html "Incendios"          "$(lucide shield-alert)"
-          inline defensa.html "Intrusión forzada"  "$(lucide door-open)"
-          inline defensa.html "Institucional"      "$(lucide landmark)"
-          # fabricacion.html
-          inline fabricacion.html "Vidrios de 6 mm" "$(lucide layers)"
-          inline fabricacion.html "Film de unión patentado" "$(lucide link)"
-          inline fabricacion.html "Laminado y sellado" "$(lucide package)"
-          # ip.html
-          inline ip.html "Fórmula del interlayer" "$(lucide flask-conical)"
-          inline ip.html "Film de unión"          "$(lucide link)"
-          inline ip.html "Colectores de borde"    "$(lucide zap)"
-          inline ip.html "Documentación"          "$(lucide file-text)"
-          # tecnologia.html
-          inline tecnologia.html "Dos vidrios, una película" "$(lucide layers)"
-          inline tecnologia.html "Guía hacia el borde" "$(lucide route)"
-          inline tecnologia.html "Colectores de borde" "$(lucide zap)"
-          echo "lucide inlined=19" > icons/_inventory.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add aplicaciones.html defensa.html fabricacion.html ip.html tecnologia.html icons/_inventory.txt
-          git commit -m "iconos: 19 emoji -> Lucide en 5 paginas (aplicaciones, defensa, fabricacion, ip, tecnologia)" || echo "no changes"
-          git push origin main
+          git add aplicaciones.html defensa.html fabricacion.html ip.html tecnologia.html icons/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "iconos: 19 emoji -> Lucide en 5 paginas" && git push origin main
+          fi
