@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <linearGradient id="fac" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#172b3a"/><stop offset="1" stop-color="#0a5a4e"/>
-    </linearGradient>
-    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#eafff6"/><stop offset="1" stop-color="#13d2bb"/>
-    </linearGradient>
-  </defs>
-  <path d="M8 20 L24 12 L54 20 V36 L38 44 L8 36 Z" fill="url(#fac)"/>
-  <path d="M8 20 L24 12 L54 20 L38 28 L8 20 Z" fill="#13d2bb" opacity="0.7"/>
-  <rect x="30" y="24" width="26" height="3" rx="1.5" fill="#eafff6" opacity="0.5"/>
-  <rect x="32" y="30" width="20" height="3" rx="1.5" fill="#eafff6" opacity="0.4"/>
-  <path d="M40 44 L52 40 L52 52 L40 56 Z" fill="url(#sheet)"/>
-  <circle cx="24" cy="12" r="4" fill="#f2b23b"/>
+<!-- @license lucide-static v0.460.0 - ISC -->
+<svg
+  class="lucide lucide-factory"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+  <path d="M17 18h1" />
+  <path d="M12 18h1" />
+  <path d="M7 18h1" />
 </svg>

@@ -218,3 +218,6 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 /* iconos duotono SVG */
 .ico img{width:30px;height:30px;vertical-align:middle}
+
+/* lucide icons inline */
+.ico svg{width:30px;height:30px;display:block}
