@@ -1,77 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Sección transversal del laminado EnergyGlass: dos vidrios, interlayer conductor, PV perimetral y flujo de luz">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" fill="none" role="img" aria-label="Sección transversal del laminado EnergyGlass con sus cinco capas y el camino de la luz">
   <defs>
-    <linearGradient id="paneT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f8f6"/><stop offset=".5" stop-color="#c8ebe7"/><stop offset="1" stop-color="#dff1f0"/></linearGradient>
-    <linearGradient id="inter" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5e8e0"/><stop offset=".5" stop-color="#8fd8cf"/><stop offset="1" stop-color="#a5e8e0"/></linearGradient>
-    <linearGradient id="pv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#129c8a"/><stop offset="1" stop-color="#0d7d70"/></linearGradient>
+    <linearGradient id="lg-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0fb8a6" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0b7a5c" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="lg-inter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2b23b" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#e09e1f" stop-opacity=".28"/>
+    </linearGradient>
+    <linearGradient id="lg-colect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d6b86"/>
+      <stop offset="1" stop-color="#0a4457"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1200" height="520" fill="#fbfefe"/>
+  <rect width="1000" height="560" fill="#ffffff"/>
 
-  <!-- flechas de luz entrando desde arriba izquierda -->
-  <g stroke="#f2a93b" stroke-width="1" opacity=".55" stroke-linecap="round">
-    <line x1="150" y1="60" x2="250" y2="120"/>
-    <line x1="230" y1="40" x2="330" y2="100"/>
-    <line x1="310" y1="70" x2="410" y2="130"/>
+  <!-- marco / sellado exterior -->
+  <rect x="70" y="150" width="860" height="220" rx="10" fill="#f0f5f4" stroke="#0a3d31" stroke-width="3"/>
+
+  <!-- luz solar entrante (arriba) -->
+  <g stroke="#f2b23b" stroke-width="4" stroke-linecap="round">
+    <line x1="160" y1="24" x2="160" y2="150">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="330" y1="24" x2="330" y2="150">
+      <animate attributeName="opacity" values=".5;1;.5" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="500" y1="24" x2="500" y2="150">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="670" y1="24" x2="670" y2="150">
+      <animate attributeName="opacity" values=".5;1;.5" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="840" y1="24" x2="840" y2="150">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/>
+    </line>
   </g>
 
-  <!-- ===== SECCIÓN DEL LAMINADO ===== -->
-  <g>
-    <rect x="360" y="170" width="500" height="42" fill="url(#paneT)" stroke="#8fc7c1" stroke-width=".8"/>
-    <line x1="360" y1="191" x2="860" y2="191" stroke="#a9d8d3" stroke-width=".5" opacity=".8"/>
-    <text x="368" y="160" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#2c5a55">Vidrio exterior — alta transmisión</text>
-    <text x="368" y="146" font-family="system-ui,sans-serif" font-size="11" fill="#7b93a0">laminado templado</text>
+  <!-- capa 1: vidrio exterior (arriba) -->
+  <rect x="70" y="150" width="860" height="52" rx="8" fill="url(#lg-glass)" stroke="#0b7a5c" stroke-width="2"/>
 
-    <rect x="360" y="240" width="500" height="30" fill="url(#inter)" stroke="#5fbcb0" stroke-width=".8"/>
-    <line x1="360" y1="255" x2="860" y2="255" stroke="#8fe4da" stroke-width=".5" opacity=".7"/>
-    <rect x="370" y="250" width="480" height="10" rx="5" fill="#0fb9a8" opacity=".25"/>
-    <text x="368" y="232" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1e7a70">Interlayer con guía de luz</text>
-    <text x="368" y="218" font-family="system-ui,sans-serif" font-size="11" fill="#7b93a0">redirecciona los fotones hacia los bordes</text>
+  <!-- capa 2: interlayer (medio, ámbar) -->
+  <rect x="70" y="202" width="860" height="68" fill="url(#lg-inter)" stroke="#e09e1f" stroke-width="2"/>
 
-    <rect x="360" y="310" width="500" height="42" fill="url(#paneT)" stroke="#8fc7c1" stroke-width=".8"/>
-    <line x1="360" y1="331" x2="860" y2="331" stroke="#a9d8d3" stroke-width=".5" opacity=".8"/>
-    <text x="368" y="372" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#2c5a55">Vidrio interior — seguridad</text>
-    <text x="368" y="388" font-family="system-ui,sans-serif" font-size="11" fill="#7b93a0">retroflexión y barrera antifragmentos</text>
+  <!-- capa 3: vidrio interior (abajo) -->
+  <rect x="70" y="270" width="860" height="52" rx="8" fill="url(#lg-glass)" stroke="#0b7a5c" stroke-width="2"/>
 
-    <g stroke="#c4d9d7" stroke-width=".6" stroke-dasharray="3 5">
-      <line x1="360" y1="212" x2="360" y2="240"/>
-      <line x1="860" y1="212" x2="860" y2="240"/>
-      <line x1="360" y1="270" x2="360" y2="310"/>
-      <line x1="860" y1="270" x2="860" y2="310"/>
-    </g>
+  <!-- capa 4: colectores de borde (izq y der) -->
+  <rect x="70" y="150" width="26" height="220" rx="6" fill="url(#lg-colect)"/>
+  <rect x="904" y="150" width="26" height="220" rx="6" fill="url(#lg-colect)"/>
+
+  <!-- capa 5: sellado (marco fino que envuelve) -->
+  <rect x="58" y="142" width="884" height="236" rx="16" fill="none" stroke="#0a3d31" stroke-width="6"/>
+
+  <!-- fotones redirigidos hacia los bordes -->
+  <g fill="#f2b23b">
+    <circle cx="300" cy="236" r="7">
+      <animate attributeName="cx" values="300;150;96" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="236;236;236" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="236" r="7">
+      <animate attributeName="cx" values="500;400;96" dur="3.2s" begin=".4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" dur="3.2s" begin=".4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="236" r="7">
+      <animate attributeName="cx" values="600;750;904" dur="3.2s" begin=".8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" dur="3.2s" begin=".8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="236" r="7">
+      <animate attributeName="cx" values="400;250;904" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- ===== PV PERIMETRAL ===== -->
-  <g>
-    <rect x="318" y="240" width="30" height="120" rx="4" fill="url(#pv)" stroke="#097a68" stroke-width=".6"/>
-    <g stroke="#bdf3ec" stroke-width=".5" opacity=".9">
-      <line x1="322" y1="252" x2="344" y2="252"/><line x1="322" y1="268" x2="344" y2="268"/><line x1="322" y1="284" x2="344" y2="284"/><line x1="322" y1="300" x2="344" y2="300"/><line x1="322" y1="316" x2="344" y2="316"/><line x1="322" y1="332" x2="344" y2="332"/>
-    </g>
-    <rect x="852" y="240" width="30" height="120" rx="4" fill="url(#pv)" stroke="#097a68" stroke-width=".6"/>
-    <g stroke="#bdf3ec" stroke-width=".5" opacity=".9">
-      <line x1="856" y1="252" x2="878" y2="252"/><line x1="856" y1="268" x2="878" y2="268"/><line x1="856" y1="284" x2="878" y2="284"/><line x1="856" y1="300" x2="878" y2="300"/><line x1="856" y1="316" x2="878" y2="316"/><line x1="856" y1="332" x2="878" y2="332"/>
-    </g>
-    <text x="252" y="305" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#0d2f3c" text-anchor="end">Células PV</text>
-    <text x="252" y="322" font-family="system-ui,sans-serif" font-size="10.5" fill="#7b93a0" text-anchor="end">perimetrales</text>
+  <!-- corriente saliendo de los colectores hacia el inversor -->
+  <g stroke="#f2b23b" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M96 370 L96 470 L330 470">
+      <animate attributeName="stroke-dashoffset" values="0;-60;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M904 370 L904 470 L670 470">
+      <animate attributeName="stroke-dashoffset" values="0;-60;0" dur="2s" begin=".5s" repeatCount="indefinite"/>
+    </path>
   </g>
+  <rect x="300" y="458" width="260" height="40" rx="6" fill="#0a3d31"/>
+  <text x="430" y="484" text-anchor="middle" fill="#ffffff" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="700">CC → inversor</text>
 
-  <!-- corriente hacia fuera -->
-  <g stroke="#0fb9a8" stroke-width=".8" opacity=".45">
-    <line x1="170" y1="300" x2="308" y2="300"/>
-    <line x1="892" y1="300" x2="1030" y2="300"/>
+  <!-- etiquetas de capas -->
+  <g font-family="Helvetica,Arial,sans-serif" fill="#12212b">
+    <text x="930" y="182" font-size="15" font-weight="700" fill="#0b7a5c">1 · Vidrio exterior</text>
+    <text x="930" y="182" font-size="13" fill="#5a6b72" dy="20">alta transmisión</text>
+
+    <text x="930" y="248" font-size="15" font-weight="700" fill="#e09e1f">2 · Interlayer</text>
+    <text x="930" y="248" font-size="13" fill="#5a6b72" dy="20">nanopartículas guía-luz</text>
+
+    <text x="930" y="308" font-size="15" font-weight="700" fill="#0b7a5c">3 · Vidrio interior</text>
+    <text x="930" y="308" font-size="13" fill="#5a6b72" dy="20">seguridad pasiva</text>
+
+    <text x="930" y="372" font-size="15" font-weight="700" fill="#1d6b86">4 · Colectores de borde</text>
+    <text x="930" y="372" font-size="13" fill="#5a6b72" dy="20">luz → corriente CC</text>
+
+    <text x="930" y="420" font-size="15" font-weight="700" fill="#0a3d31">5 · Sellado</text>
+    <text x="930" y="420" font-size="13" fill="#5a6b72" dy="20">humedad + térmica</text>
   </g>
-  <text x="1038" y="295" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#0d2f3c">⇢ corriente</text>
-  <text x="1038" y="311" font-family="system-ui,sans-serif" font-size="10.5" fill="#7b93a0">CC ⇢ inversor</text>
-
-  <!-- trayectoria de luz guiada hacia el borde -->
-  <path d="M610 205 L610 240" stroke="#f2a93b" stroke-width=".9" fill="none" opacity=".6" stroke-dasharray="2 4"/>
-  <path d="M610 255 Q640 255 700 275 Q760 295 840 300" stroke="#f2a93b" stroke-width=".8" fill="none" opacity=".45" stroke-dasharray="2 4"/>
-  <text x="620" y="285" font-family="system-ui,sans-serif" font-size="10.5" fill="#b07a28">luz guiada ⇢ borde</text>
-
-  <!-- cotas finales -->
-  <g stroke="#c4d9d7" stroke-width=".6">
-    <line x1="900" y1="170" x2="900" y2="352"/>
-    <line x1="895" y1="170" x2="905" y2="170"/>
-    <line x1="895" y1="352" x2="905" y2="352"/>
-  </g>
-  <text x="912" y="262" font-family="system-ui,sans-serif" font-size="11" fill="#7b93a0">≈ 16 mm</text>
 </svg>
