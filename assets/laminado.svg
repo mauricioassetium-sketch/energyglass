@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" fill="none" role="img" aria-label="Sección transversal del laminado EnergyGlass con sus cinco capas y el camino de la luz">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 620" fill="none" role="img" aria-label="Sección transversal del laminado EnergyGlass con sus cinco capas y el camino de la luz">
   <defs>
     <linearGradient id="lg-glass" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0fb8a6" stop-opacity=".30"/>
@@ -14,44 +14,34 @@
     </linearGradient>
   </defs>
 
-  <rect width="760" height="620" fill="#ffffff"/>
+  <rect width="810" height="620" fill="#ffffff"/>
 
-  <!-- título interno -->
-  <text x="380" y="46" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#12212b">Cinco etapas, un solo panel</text>
+  <text x="405" y="46" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#12212b">Cinco etapas, un solo panel</text>
 
-  <!-- luz solar entrante -->
   <g stroke="#f2b23b" stroke-width="4" stroke-linecap="round">
-    <line x1="140" y1="78" x2="140" y2="132">
+    <line x1="170" y1="78" x2="170" y2="132">
       <animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/>
     </line>
-    <line x1="290" y1="78" x2="290" y2="132">
+    <line x1="240" y1="78" x2="240" y2="132">
       <animate attributeName="opacity" values=".5;1;.5" dur="2.4s" repeatCount="indefinite"/>
     </line>
-    <line x1="440" y1="78" x2="440" y2="132">
+    <line x1="360" y1="78" x2="360" y2="132">
       <animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/>
     </line>
-    <line x1="590" y1="78" x2="590" y2="132">
+    <line x1="430" y1="78" x2="430" y2="132">
       <animate attributeName="opacity" values=".5;1;.5" dur="2.4s" repeatCount="indefinite"/>
     </line>
   </g>
 
-  <!-- marco / sellado exterior (capa 5) -->
   <rect x="58" y="132" width="484" height="236" rx="16" fill="none" stroke="#0a3d31" stroke-width="6"/>
 
-  <!-- capa 1: vidrio exterior -->
   <rect x="70" y="140" width="460" height="54" rx="8" fill="url(#lg-glass)" stroke="#0b7a5c" stroke-width="2"/>
-
-  <!-- capa 2: interlayer -->
   <rect x="70" y="194" width="460" height="74" fill="url(#lg-inter)" stroke="#e09e1f" stroke-width="2"/>
-
-  <!-- capa 3: vidrio interior -->
   <rect x="70" y="268" width="460" height="54" rx="8" fill="url(#lg-glass)" stroke="#0b7a5c" stroke-width="2"/>
 
-  <!-- capa 4: colectores de borde -->
   <rect x="70" y="140" width="22" height="182" rx="5" fill="url(#lg-colect)"/>
   <rect x="508" y="140" width="22" height="182" rx="5" fill="url(#lg-colect)"/>
 
-  <!-- fotones redirigidos hacia los bordes -->
   <g fill="#f2b23b">
     <circle cx="300" cy="231" r="7">
       <animate attributeName="cx" values="300;180;92" dur="3s" repeatCount="indefinite"/>
@@ -71,7 +61,6 @@
     </circle>
   </g>
 
-  <!-- corriente CC saliendo hacia el inversor -->
   <g stroke="#f2b23b" stroke-width="5" stroke-linecap="round" fill="none" stroke-dasharray="8 8">
     <path d="M92 370 L92 462 L220 462">
       <animate attributeName="stroke-dashoffset" values="0;-64;0" dur="1.6s" repeatCount="indefinite"/>
@@ -83,32 +72,18 @@
   <rect x="200" y="452" width="200" height="40" rx="6" fill="#0a3d31"/>
   <text x="300" y="478" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">CC → inversor</text>
 
-  <!-- flechas de luz guiada -->
-  <path d="M92 246 L60 246" stroke="#f2b23b" stroke-width="3" stroke-linecap="round">
-    <animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/>
-  </path>
-  <path d="M508 246 L540 246" stroke="#f2b23b" stroke-width="3" stroke-linecap="round">
-    <animate attributeName="opacity" values="1;.2;1" dur="1.8s" begin=".9s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- etiquetas numeradas (a la derecha del panel) -->
   <g font-family="Helvetica,Arial,sans-serif">
     <text x="596" y="172" font-size="17" font-weight="700" fill="#0b7a5c">1 · Vidrio exterior</text>
     <text x="596" y="192" font-size="13" fill="#5a6b72">alta transmisión</text>
-
     <text x="596" y="238" font-size="17" font-weight="700" fill="#e09e1f">2 · Interlayer</text>
     <text x="596" y="258" font-size="13" fill="#5a6b72">nanopartículas guía-luz</text>
-
     <text x="596" y="304" font-size="17" font-weight="700" fill="#0b7a5c">3 · Vidrio interior</text>
     <text x="596" y="324" font-size="13" fill="#5a6b72">seguridad pasiva</text>
-
     <text x="596" y="392" font-size="17" font-weight="700" fill="#1d6b86">4 · Colectores de borde</text>
     <text x="596" y="412" font-size="13" fill="#5a6b72">luz → corriente CC</text>
-
     <text x="596" y="444" font-size="17" font-weight="700" fill="#0a3d31">5 · Sellado</text>
     <text x="596" y="464" font-size="13" fill="#5a6b72">humedad + protección térmica</text>
   </g>
 
-  <!-- nota de grosor -->
-  <text x="380" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#5a6b72">Grosor del laminado: 12–58 mm según especificación</text>
+  <text x="405" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#5a6b72">Grosor del laminado: 12–58 mm según especificación</text>
 </svg>
