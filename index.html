@@ -283,5 +283,14 @@
   </div>
 </footer>
 <script src="script.js"></script>
+<script>
+/* Congelar animaciones SMIL cuando el usuario prefiere movimiento reducido */
+(function(){
+  if(!window.matchMedia || !matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('svg').forEach(function(s){
+    if(s.pauseAnimations){ try{ s.setCurrentTime(2.5); }catch(e){} s.pauseAnimations(); }
+  });
+})();
+</script>
 </body>
 </html>
