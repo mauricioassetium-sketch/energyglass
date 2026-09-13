@@ -3,7 +3,7 @@
    Paleta: verde vidrio / teal + ámbar solar + neutros claros
    ============================================================ */
 :root{
-  --green:#0b7a5c;          /* verde vidrio principal */
+  --green:#0b7a5c;           /* verde vidrio principal */
   --green-dk:#0a3d31;        /* verde oscuro (secciones) */
   --green-deep:#072a23;      /* footer / casi-negro */
   --teal:#0fb8a6;            /* acento agua */
@@ -34,7 +34,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
 
-/* ------ nav ------ */
+/* ---- nav ---- */
 .nav{
   background:var(--paper);
   border-bottom:1px solid var(--line);
@@ -57,11 +57,11 @@ a{color:inherit;text-decoration:none}
 }
 .navmenu .cta:hover{background:var(--amber-dk);color:#221500}
 
-/* ------ hero ------ */
+/* ---- hero ---- */
 .hero{position:relative;background:var(--green-dk);color:#fff;overflow:hidden}
 .hero-photo{position:absolute;inset:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;opacity:.28}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,42,35,.55),rgba(7,42,35,.85))}
+.hero-photo img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,42,35,.92) 0%,rgba(7,42,35,.72) 46%,rgba(7,42,35,.30) 78%,rgba(7,42,35,.10) 100%)}
 .hero-inner{position:relative;padding:96px 24px 84px;max-width:var(--wrap);margin:0 auto}
 .hero-grid{
   display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;
@@ -78,14 +78,15 @@ a{color:inherit;text-decoration:none}
 .hero-svg{width:100%;height:auto;max-width:560px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35))}
 .btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn{
-  display:inline-block;padding:14px 26px;border-radius:var(--r);font-weight:700;font-size:15px;transition:.2s;
+  display:inline-block;padding:14px 26px;border-radius:var(--r);font-weight:700;
+  font-size:15px;transition:.2s;
 }
 .btn.amber{background:var(--amber);color:#221500}
 .btn.amber:hover{background:var(--amber-dk)}
 .btn.ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
 .btn.ghost:hover{background:rgba(255,255,255,.12)}
 
-/* ------ sections ------ */
+/* ---- sections ---- */
 section{padding:72px 0}
 section.tight{padding:56px 0}
 section.alt{background:var(--paper-t)}
@@ -98,7 +99,7 @@ h2{font-size:38px;font-weight:700;letter-spacing:-.6px;line-height:1.12;margin:0
 h2 + p.lede{font-size:19px;color:var(--ink-soft);max-width:720px}
 h3{font-size:22px;font-weight:700;letter-spacing:-.2px;margin-bottom:8px}
 
-/* ------ stats band ------ */
+/* ---- stats band ---- */
 .stats{
   background:var(--green-dk);color:#fff;padding:0;
 }
@@ -108,7 +109,7 @@ h3{font-size:22px;font-weight:700;letter-spacing:-.2px;margin-bottom:8px}
 .stat .num small{font-size:22px}
 .stat .lbl{font-size:14px;color:#cfe0db;margin-top:6px}
 
-/* ------ cards grid ------ */
+/* ---- cards grid ---- */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .card{
@@ -123,13 +124,13 @@ h3{font-size:22px;font-weight:700;letter-spacing:-.2px;margin-bottom:8px}
 .card .link:after{content:" →";margin-left:4px}
 .card .link:hover{color:var(--amber-dk)}
 
-/* ------ split media ------ */
+/* ---- split media ---- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .split .txt h2{margin-bottom:16px}
 .split .txt p{font-size:16.5px;color:var(--ink-soft);margin-bottom:16px}
 .split img{width:100%;height:340px;object-fit:cover;border-radius:var(--r)}
 
-/* ------ deep cta band ------ */
+/* ---- deep cta band ---- */
 .deep h2{color:#fff}
 .deep .kicker{color:var(--amber)}
 .deep p.lede{color:#bcd4cd}
@@ -139,18 +140,18 @@ h3{font-size:22px;font-weight:700;letter-spacing:-.2px;margin-bottom:8px}
 .deep .card h3{color:#fff}
 .deep .card .link{color:var(--amber)}
 
-/* ------ table ------ */
+/* ---- table ---- */
 .tbl{width:100%;border-collapse:collapse;font-size:15px}
 .tbl th,.tbl td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line)}
 .tbl th{color:var(--ink-soft);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.6px}
 .tbl td:last-child{font-weight:600}
 
-/* ------ photo strip ------ */
+/* ---- photo strip ---- */
 .photos{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .photos figure img{width:100%;height:260px;object-fit:cover;border-radius:var(--r)}
 .photos figcaption{font-size:14px;color:var(--ink-soft);margin-top:10px}
 
-/* ------ footer ------ */
+/* ---- footer ---- */
 footer{background:var(--green-deep);color:#cfe0db;padding:64px 0 32px}
 footer .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
 footer h4{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:1.4px;margin-bottom:16px}
@@ -160,7 +161,7 @@ footer .brand{color:#fff;font-size:20px}
 footer .tagline{color:var(--amber);margin-top:8px;font-size:15px}
 footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;font-size:13px;color:#8fb0a5}
 
-/* ------ reveal on scroll ------ */
+/* ---- reveal on scroll ---- */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in-view{opacity:1;transform:none}
 
@@ -196,7 +197,7 @@ footer .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .ico-svg{opacity:0;transform:scale(.94);transform-origin:center;transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
 .ico-svg.in-view{opacity:1;transform:scale(1)}
 
-/* ------ responsive ------ */
+/* ---- responsive ---- */
 @media(max-width:920px){
   .navmenu{display:none}
   .hero-grid{grid-template-columns:1fr;gap:36px}
